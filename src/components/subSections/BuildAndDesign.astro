@@ -1,0 +1,78 @@
+---
+import Section from "../crackHeadphones/Section.astro";
+---
+<div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-[64px] md:pr-8 md:pl-18 md:pb-0  lg:pt-[80px] lg:pr-36 lg:pl-36 lg:pb-0">
+    <Section 
+        HeadingType="h2"  
+        headingText="Build and Design Process"
+    >
+                <!--sketches -->
+        <div class="grid grid-cols-2">
+            <Section     
+                HeadingType="h3" 
+                headingText="Sketches"
+                content="In order to conceptualize the appearance and tactile qualities of the headphones, I have established the following guiding objectives:"
+            >
+            <ul class="list-inside">
+                <li class="list-decimal">Utilizing data obtained through user research and competitive analysis, create a sketch of the headphones with consideration for the following categories: shape, comfort, accessibility, material, dimensions, and sizing.</li>
+                <li class="list-decimal">Naming the headphones and designing an appropriate logo</li>
+            </ul>
+            </Section>
+            <div class="grid grid-cols-2 grid-rows-2 gap-3 items-start">
+                <img src="/images/CRACKHEAD/sideview.png" alt="headset side-view">
+                <img  src="/images/CRACKHEAD/frontview.png" alt="headset front-view">
+                <img src="/images/CRACKHEAD/perspectiveView.png" alt="headset perspective-view">
+                <img src="/images/CRACKHEAD/allviews.png" alt="headset all views">
+            </div>
+        </div>
+
+            <!-- wireframes -->
+        <Section     
+            HeadingType="h3" 
+            headingText="Digital Wireframes"
+            containerStyle="grid grid-cols-4"
+        >
+            <img src="/images/CRACKHEAD/wireframeperspective.png" alt="headset side-view">
+            <img  src="/images/CRACKHEAD/wireframefront.png" alt="headset front-view">
+            <img src="/images/CRACKHEAD/wireframetop.png" alt="headset perspective-view">
+            <img src="/images/CRACKHEAD/wireframeside.png" alt="headset all views">
+        </Section>
+
+        <!-- 3d design -->
+        <Section     
+            HeadingType="h3" 
+            headingText="3D Design"
+            containerStyle="grid grid-cols-2 mt-4"
+            
+        >
+            <div class="grid grid-rows-6 grid-cols-2 leading-3 text-[5.87px] md:text-[17px] md:leading-4">
+                <p class="font-bold  relative after:content-[url('/images/CRACKHEAD/Line24.svg')] after:absolute after:top-0">Embossed “CRACK” text with a cracked feel and also a solar panel for charging.</p>
+                <p class="font-bold  row-[2] col-[2] relative after:content-[url('/images/CRACKHEAD/Line24.svg')] after:absolute after:top-0">Buttons to help with Quick Pause/Play, Next, and Previous commands.</p>
+                <p class="font-bold  row-[3] col-[1] relative after:content-[url('/images/CRACKHEAD/Line24.svg')] after:absolute after:top-0 after:left-[220px]">Tiangular shaped design and easy to replace earpads</p>
+                <p class="font-bold  row-[5] col[1] relative after:content-[url('/images/CRACKHEAD/Line24.svg')] after:absolute after:top-0">LED “CRACK” battery indicator. Each letter represents a 20% charge level.</p>
+                <p class="font-bold  row-[6] col-[2] relative after:content-[url('/images/CRACKHEAD/Line24.svg')] after:absolute after:top-0">Link Up buttons to sync-play music with other close ranged crack headphones.</p>
+            </div>
+
+            <div class="grid grid-cols-2 grid-rows-2 gap-2">
+                <img src="/images/CRACKHEAD/3dtop.png" alt="headset side-view">
+                <img  src="/images/CRACKHEAD/3dperspective.png" alt="headset front-view">
+                <img src="/images/CRACKHEAD/3dside.png" alt="headset perspective-view">
+                <img src="/images/CRACKHEAD/3dperwhite.png" alt="headset all views">
+            </div>
+        </Section>
+
+        <!-- logo -->
+        <Section     
+            HeadingType="h3" 
+            headingText="Logo"
+            containerStyle="flex mt-[100px"
+        >
+            <p class="md:w-[70%]">
+                Coming up with a name for the headphones was a humorous and imaginative process. After a long day of trying to come up with a name, I decided to take a break and as I looked around the room, my eyes landed on a crack in the wall. That's when it hit me - "Crack" would be the perfect name for the headphones. The design of the word logo was inspired by that moment, and the brandmark logo actually came to me in a dream later that same night.
+                <br><br>
+                A flat and simple logo was also created for a mobile-first design experience so it can present well across different mediums.
+            </p>
+            <img class="md:w-[30%]" src="/images/CRACKHEAD/crackLogo.svg" alt="inspiration for crackhead logo">
+        </Section>
+    </Section>
+</div>

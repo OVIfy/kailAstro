@@ -1,0 +1,62 @@
+---
+interface Props{
+    headingText : string,
+    HeadingType : 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
+    headingStyle? : string,
+    content? : any,
+    align? : 'center' | 'left' | 'right',
+    contentStyle? : string,
+    ContainerType? : 'p' | 'div' | 'section',
+    containerStyle? : string
+}
+
+let h2S = "text-[17px] tracking-[0.11px] leading-4 font-medium  md:text-[34px] md:leading-[41px] md:tracking-[0.37px] "
+let h3S = "mt-4 text-[11px] tracking-[0.11px] leading-4 font-medium  md:text-[24px] md:tracking-[0.37px] mt-[24px]"
+let h4S = "text-[8px] tracking-[0.11px] leading-[12.2px] font-semibold md:text-[17px] md:leading-[41px] md:tracking-[0.37px]"
+
+let {headingText = 'heading', HeadingType = 'h1', headingStyle, contentStyle = "text-[11px] tracking-[0.3px] leading-[24px] md:text-[17px] md:leading-[40px]", align, content, ContainerType = 'div', containerStyle = 'text-[11px] tracking-[0.3px] leading-[24px] md:text-[17px] md:leading-[40px]'} = Astro.props
+
+if(!headingStyle){
+    switch (HeadingType) {
+        case 'h1':
+                headingStyle = 'text-red-600'
+            break;
+        case 'h2':
+                headingStyle = h2S
+            break;
+        case 'h3':
+                headingStyle = h3S
+            break;
+        default:
+            break;
+    }
+}
+
+let alignment = ''
+switch (align) {
+    case 'center':
+        alignment = 'text-center'
+        break;
+    case 'left':
+        alignment = 'text-left'
+        break;
+    case 'right':
+        alignment = 'text-right'
+        break;
+
+    default:
+        break;
+}
+---
+
+<section>
+    <HeadingType class:list={[alignment ,headingStyle]}>{headingText}</HeadingType>
+    {content && 
+        <p class:list={[alignment ,contentStyle]}>
+            {content}
+        </p>
+    }
+    <ContainerType class:list={['mt-4' ,containerStyle]}>
+        <slot class:list={[alignment]}/>
+    </ContainerType>
+</section>

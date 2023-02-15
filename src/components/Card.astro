@@ -1,0 +1,44 @@
+---
+interface Props{
+    headingText? : string,
+    HeadingType? : 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
+    headingStyle? : string,
+    content? : any,
+    align? : 'center' | 'left' | 'right',
+    contentStyle? : string,
+    alt?: string,
+    url?: string,
+    cardStyle? : string,
+    imageStyle? : string
+}
+const {url, alt, headingText = 'heading', HeadingType, headingStyle, contentStyle, align, content, imageStyle, cardStyle} = Astro.props
+
+let alignment = ''
+switch (align) {
+    case 'center':
+        alignment = 'text-center'
+        break;
+    case 'left':
+        alignment = 'text-left'
+        break;
+    case 'right':
+        alignment = 'text-right'
+        break;
+
+    default:
+        break;
+}
+---
+
+<div class={cardStyle}>
+    <section class:list={[alignment]}>
+        {url && <img src={url} alt={alt} class:list={['inline-block' ,alignment, imageStyle]}>}
+        {HeadingType && <HeadingType class:list={[alignment ,headingStyle]}>{headingText}</HeadingType>}
+        {content && 
+            <p class:list={[alignment ,contentStyle]}>
+                {content}
+            </p>
+        }
+        <slot/>
+    </section>
+</div>

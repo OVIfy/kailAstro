@@ -1,0 +1,13 @@
+---
+ interface Props{
+    title : string,
+    content: Array<string>
+ }
+ const {title, content} = Astro.props
+---
+<section>
+    <h3 class="text-[8px] tracking-[-0.12px] font-semibold leading-[6.6px] md:text-[17px] md:leading-[22px]">{title}</h3>
+    <ul class="list-inside list-decimal mt-[2px] text-[8px] md:text-[15px]">
+        {content.map((item)=> <li class=" leading-4 text-gra list-disc md:leading-[40px]">{item}</li>)}
+    </ul>
+</section>

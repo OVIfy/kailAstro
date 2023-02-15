@@ -1,0 +1,437 @@
+---
+// Welcome to Astro! Everything between these triple-dash code fences
+// is your "component front matter". It never runs in the browser.
+import '../styles/style.css'
+console.log('This runs in your terminal, not the browser!');
+---
+<!-- Below is your "component template." It's just HTML, but with
+     some magic sprinkled in to help you build great templates. -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body class="relative">
+        <header>
+            <div class="pt-[89px] pb-5 pr-4 pl-4 lg:pr-[40px] lg:pl-[40px] lg:pb-[62px] md:pt-[50px] bg-lightGra2-100">
+                                                                <!-- desktop nav -->
+                <nav>
+                    <div class="hidden  md:flex items-center justify-between">
+                        <div class="flex">
+                            <div class="w-[97px] h-[97px] bg-gray-600 rounded-full"></div>
+                            <div class="mt-[30px]">
+                                <p class="text-[32px] font-bold">Kamil Oseni</p>
+                                <p class="text-darkBlue">Designing The Future, One Pixel At A Time</p>
+                            </div>
+                        </div>
+            
+                        <ul class="flex gap-16 text-darkBlue">
+                            <li>Home</li>
+                            <li>Resume</li>
+                            <li><a href="#" class="bg-black text-white p-[16px] rounded-[24px]">Get in touch</a></li>
+                        </ul>  
+                    </div>
+                </nav>
+    
+                                                                    <!-- mobile nav -->
+                <nav>
+                    <div class="md:hidden items-center flex justify-between">
+                        <div class="w-12 h-12 relative nav-btnOpen">
+                            <div class="flex flex-col justify-center items-center absolute top-0 bottom-0 right-0 left-0 pr-2 pl-2 pb-2 pt-2">
+                                <div class="w-full h-[3px] bg-darkBlue nav-line mb-[2px] rounded-md transform translate-x-[-100px] animate-sliding-in-1"></div>
+                                <div class="w-full h-[3px] bg-darkBlue nav-line mt-[2px] rounded-md transform translate-x-[-100px] animate-sliding-in-2"></div>
+                            </div>
+                            <button class="absolute top-0 bottom-0 left-0 right-0 opacity-0 nav-btn">open nav</button>
+                        </div>
+    
+                        <p class="max-w-[188px] text-[11px] sm:text-sm text-center opacity-0 animate-fadeIn">“Designing the future, one pixel at a time.”</p>
+    
+                        <div class="w-16 h-16 bg-center bg-cover rounded-full bg-[url('/images/KamilArt.png')]"></div>
+                    </div>
+    
+                    <!-- nav menu mobile -->
+                    <div class="bg-white fixed top-0 right-0 left-0 z-50 pt-[68px] pr-4 pl-4 min-h-[100vh] nav-menu hidden rounded-r-[50px] shadow-2xl">
+                                                        <!-- section one -->
+                        <div class="flex justify-between items-center">
+                            <div class="w-16 h-16 bg-center bg-cover rounded-full bg-[url('/images/KamilArt.png')]"></div>
+                            <div class="w-12 h-12 relative">   <!--nav button-->
+                                <div class="flex flex-col justify-center items-center absolute top-0 bottom-0 right-0 left-0 pr-2 pl-2 pb-2 pt-2">
+                                    <div class="w-full h-[3px] bg-darkBlue nav-line mb-[2px] rounded-md transform animate-nav-one-closing"></div>
+                                    <div class="w-full h-[3px] bg-darkBlue nav-line mt-[2px] rounded-md transform animate-nav-two-closing"></div>
+                                </div>
+                                <button class="absolute top-0 bottom-0 left-0 right-0 opacity-0 nav-btnClose">close nav</button>
+                            </div>
+                        </div>
+                                                            <!-- section two -->
+                        <div class="mt-10">
+                            <ul>
+                                <li class="text-[24px] font-semibold text-darkBlue transform translate-y-[100px] opacity-0 animate-nav-item-one">Home<span class="inline-block relative bottom-1 w-1 h-1 ml-2 bg-darkBlue"></span></li>
+                                <li class="text-[24px] font-semibold text-darkBlue mt-10 mb-10 transform translate-y-[100px] opacity-0 animate-nav-item-two">Resume<span class="inline-block relative bottom-1 w-1 h-1 ml-2 bg-darkBlue"></span></li>
+                                <li class="text-[24px] font-semibold text-darkBlue transform translate-y-[100px] opacity-0 animate-nav-item-three">Get in touch<span class="inline-block relative bottom-1 w-1 h-1 ml-2 bg-darkBlue"></span></li>
+                            </ul>
+                        </div>     
+                                                                <!-- section three -->
+                        <ul class="mt-9 transform translate-y-[100px] opacity-0 animate-nav-item-three">
+                            <li class="text-darkBlue font-bold">Instagram</li>
+                            <li class="mt-2 text-darkBlue font-bold">LinkedIn</li>
+                        </ul>
+                                                                    <!-- section four -->
+                        <div class="flex w-24 justify-between mt-12 transform translate-y-[100px] opacity-0 animate-nav-item-three">
+                            <img src="./images/twitterWhite.svg" alt="twitter icon">
+                            <img src="./images/mailWhite.png" alt="mail icon">
+                        </div>
+                    
+                    </div>
+                </nav>
+                                    
+                <section class="text-center">
+                    <h1 class="lg:text-[100px] md:text-[60px] text-[32px] text-darkBlue font-semibold mt-16">Making Complex Simple</h1>
+                    <p class="text-[25px] md:text-[50px] text-darkBlue mt-[11px] md:mt-[48px]">Hi, I'm Kamil Oseni 👋🏾</p>
+                    <p class="mt-3 text-[11px] sm:text-xl md:text-2xl text-darkBlue">I'm a creative product designer who is always on the hunt for new challenges and projects to sink my teeth into. Oh, and I absolutely adore art!</p>
+                    <img class="md:inline-block mt-5 hidden " src="./images/Line48.svg" alt="" srcset="">
+                </section>
+            </div>
+    
+                                                                    <!-- mobile nav -->
+            <div>
+    
+            </div>                                                                
+        </header>
+    
+        <main>
+    
+                                                                                <!-- case studies -->
+            <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[100px]">
+                <section>
+                    <div class="relative">                                 <!--heading div-->
+                        <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div>
+                        <div class="mb-[17px] md:mb-[48px] relative">
+                            <h2 class="text-[17px] md:text-2xl font-semibold">CASE STUDIES</h2> 
+                            <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
+                        </div>
+                        <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[24px] relative">LATEST WORKS</p>
+                        <p class="text-[25px] md:text-[50px] text-black font-bold max-w-[800px] mb-[24px] relative">CREATIVITY TAKES COURAGE.</p>
+                        <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">“The real measure for any technology is how intuitive it is to use.“</p>
+                    </div>
+                        <!-- cards grid -->
+                    <div class="flex flex-wrap gap-4 xl:gap-8">
+                        <div class="inline-block w-[190px] lg:w-[340px] md:w-[300px]">          <!-- card -->
+                            <a href="/projects/crack-headphones"><div class="w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra">
+                                <img src="./images/White 3 1.png" alt="a gif of glass webpage design" srcset="">
+                            </div></a>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold mt-6">CRACK Control Hub</p>
+                                <p class="text-darkBlue text-[11px] lg:text-[16px] mt-2 opacity-80">My full design of the Crack headphone, a luxury headphone with built-in speakers for sophisticated, retro-modern style</p>
+                                <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">JULY 2015</p>
+                            </div>
+                        </div>
+        
+                        <div class="inline-block w-[190px] md:w-[300px] lg:w-[340px]">          <!-- card -->
+                            <div class="lg:w-[340px] lg:h-[340px] w-[190px] h-[190px] md:w-[300px] md:h-[300px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra">
+                                <img src="./images/White 3 1.png" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold mt-6">CRACK X Chelsea FC</p>
+                                <p class="text-darkBlue mt-2 text-[11px] lg:text-[16px] opacity-80">I designed a VR experience using XR to enhance live football viewing at Stamford Bridge, offering fully immersive experiences for fans.</p>
+                                <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">JUNE 2022</p>
+                            </div>
+                        </div>
+        
+                        <div class="inline-block w-[190px] md:w-[300px] lg:w-[340px]">          <!-- card -->
+                            <div class="w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] box-border rounded-[16px] flex text-cente justify-center items-center border-2 border-lightGra">
+                                <img src="./images/Kamil Oseni Winamp Redesign.png" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold mt-6">Winamp Redesign</p>
+                                <p class="text-darkBlue mt-2 text-[11px] lg:text-[16px] opacity-80">A redesign of the old Winamp UI</p>
+                                <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">DECEMBER 2022</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                   
+                   
+                </section> 
+    
+           
+            </div>
+    
+                                                                                <!-- ui designs -->
+            <div class="pt-8 pb-8 pr-4 pl-4 bg-lightGra2-100 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[100px]">
+                <section>
+                    <div class="relative">                                 <!--heading div-->
+                        <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div>
+                        <div class="mb-[17px] md:mb-[48px] relative">
+                            <h2 class="text-[17px] md:text-2xl font-semibold">UI DESIGNS</h2> 
+                            <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
+                        </div>
+                        <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[24px] relative">LATEST WORKS</p>
+                        <p class="text-[25px] md:text-[50px] text-black font-bold max-w-[800px] mb-[24px] relative">DESIGNING THE FUTURE, ONE PIXEL AT A TIME</p>
+                        <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">Click to see the magic happen!</p>
+                    </div>
+    
+    
+                    <div class="flex flex-wrap gap-8">
+                        <div class="inline-block">          <!-- card -->
+                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra modal-open hover:cursor-pointer">
+                                <img width="90%" src="./images/Crack Control Hub mock GIF.gif" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold">CRACK Control Hub</p>
+                                <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                            </div>
+                        </div>
+    
+                        <div class="inline-block">          <!-- card -->
+                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
+                                <img  src="./images/Marketing Dashboard Gif.gif" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold">Marketing Dashboard</p>
+                                <p class="text-darkBlue text-xs mt-4 underline">Click to view published dashboard</p>
+                                <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                            </div>
+                        </div>
+    
+                        <div class="inline-block">          <!-- card -->
+                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
+                                <img  src="./images/CRACK Web Gif.gif" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold">CRACK Website Design</p>
+                                <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                            </div>
+                        </div>
+    
+                        <div class="inline-block">          <!-- card -->
+                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
+                                <img src="./images/glass.gif" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold">Glass Website Design</p>
+                                <p class="text-darkBlue mt-4 underline text-xs">Click to view prototype</p>
+                            </div>
+                        </div>
+    
+                        <div class="inline-block">          <!-- card -->
+                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
+                                <img src="./images/GalileeHero.png" alt="a gif of glass webpage design" srcset="">
+                            </div>
+                            <div class="text-center">
+                                <p class="lg:text-2xl text-darkBlue font-bold">Galilee by CRACK</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </section> 
+    
+           
+            </div>
+          
+    
+                                                                                    <!-- about you -->
+            <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[100px]">
+                <section class="md:flex">
+                    <div class="basis-3/4">
+                        <div class="relative">                                 <!--heading div-->
+                            <div class="mb-[17px] md:mb-[48px] relative">
+                                <h2 class="text-[17px] md:text-2xl font-semibold">ABOUT ME</h2> 
+                                <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
+                            </div>
+                            <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[24px] relative">WHO AM I?</p>
+                            <p class="text-[25px] md:text-[50px] text-black font-bold max-w-[800px] mb-[24px] relative">BE YOURSELF!</p>
+                            <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">“The important thing is not to stop questioning. Curiosity has its own reason for existence. “</>
+                        </div>
+    
+                        <section>
+                            <h3 class="text-darkBlue text-[12px] md:text-[17px] font-extrabold tracking-[7px]">HOBBIES</h3>
+                            <p class="tracking-[1px] md:text-[16px] text-[12px] text-gra leading-10 mt-2 md:mt-4">Hi there, I'm Kamil Oseni! I'm a sucker for all things art - paintings, sculptures, talent, dance, the environment, anything that screams art. 
+                                When I'm not binging on cartoons or anime, you can find me rollerblading, writing, or taking pictures of my surrounding. And of course, I have a huge soft spot for dogs too!
+                            </p>
+                        </section>
+    
+                        <section>
+                            <h3 class="text-darkBlue font-extrabold md:text-[17px] tracking-[7px] mt-10 text-[12px]">PERSONALITY</h3>
+                            <p class="tracking-[1px] md:text-[16px] text-[12px] text-gra leading-10 mt-2 md:mt-4">Hi there, I'm Kamil Oseni! I'm a sucker for all things art - paintings, sculptures, talent, dance, the environment, anything that screams art. 
+                                When I'm not binging on cartoons or anime, you can find me rollerblading, writing, or taking pictures of my surrounding. And of course, I have a huge soft spot for dogs too!
+                            </p>
+                        </section>
+    
+                        <section>
+                            <h3 class="text-darkBlue font-extrabold md:text-[17px] tracking-[7px] mt-10 text-[12px]">MOTIVATION</h3>
+                            <p class="tracking-[1px] md:text-[16px] text-[12px] text-gra leading-10 mt-2 md:mt-4">Hi there, I'm Kamil Oseni! I'm a sucker for all things art - paintings, sculptures, talent, dance, the environment, anything that screams art. 
+                                When I'm not binging on cartoons or anime, you can find me rollerblading, writing, or taking pictures of my surrounding. And of course, I have a huge soft spot for dogs too!
+                            </p>
+                        </section>
+    
+                        <section>
+                            <h3 class="text-darkBlue font-extrabold md:text-[17px] tracking-[7px] mt-10 text-[12px]">WORKPLACE HABITS</h3>
+                            <p class="tracking-[1px] md:text-[16px] text-[12px] text-gra leading-10 mt-2 md:mt-4">
+                                To me, a satisfying workplace is pretty straightforward. I crave intellectual stimulation, the freedom to explore my ideas, and the chance to tackle tough puzzles. That's all I need to feel fulfilled in my work!
+                            </p>
+    
+                            <section>
+                                <h3 class="text-darkBlue text-[12px] md:text-[17px] font-extrabold mt-10">As an employee</h3>
+                                <p class="tracking-[1px] md:text-[16px] text-[12px] text-gra leading-10 mt-2 md:mt-4">Hi there, I'm Kamil Oseni! I'm a sucker for all things art - paintings, sculptures, talent, dance, the environment, anything that screams art. 
+                                    When I'm not binging on cartoons or anime, you can find me rollerblading, writing, or taking pictures of my surrounding. And of course, I have a huge soft spot for dogs too!
+                                </p>
+                            </section>
+    
+                            <section>
+                                <h3 class="text-darkBlue text-[12px] md:text-[17px] font-extrabold mt-10">As a manager</h3>
+                                <p class="tracking-[1px] md:text-[16px] text-[12px] text-gra leading-10 mt-2 md:mt-4">Hi there, I'm Kamil Oseni! I'm a sucker for all things art - paintings, sculptures, talent, dance, the environment, anything that screams art. 
+                                    When I'm not binging on cartoons or anime, you can find me rollerblading, writing, or taking pictures of my surrounding. And of course, I have a huge soft spot for dogs too!
+                                </p>
+                            </section>
+                        </section>
+                    </div>
+    
+                    <div class="basis-1/4 hidden md:block">
+                        <div class="xl:w-[359px] xl:h-[359px] lg:w-[280px] lg:h-[280px] md:w-[200px] md:h-[200px] bg-slate-600 bg-center bg-cover rounded-full bg-[url('/images/Profilepic.png')]"></div>
+                    </div>
+                </section>
+            </div>
+    
+    
+                                                                                                    <!-- contact me -->
+            <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[32px] lg:pb-[32px] bg-lightGra2-100">
+                <section>
+                   <div class="relative">                                 <!--heading div-->
+                        <!-- <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div> -->
+                        <div class="mb-[17px] md:mb-[48px] relative">
+                            <h2 class="text-[17px] md:text-2xl font-semibold">ABOUT ME</h2> 
+                            <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
+                        </div>
+                        <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[24px] relative">WHO AM I?</p>
+                        <p class="text-[25px] md:text-[50px] text-black font-bold max-w-[800px] mb-[24px] relative">YOU’RE A MESSAGE AWAY FROM GETTING THE BEST SERVICE ;)</p>
+                    </div>
+    
+    
+                        <!-- contact card -->
+                    <div class="bg-white flex pt-10 md:pt-[133px] pb-[123px] items-end">
+                                                                        <!-- first half -->
+                        <div class="basis-[50%] md:pl-[32px] pl-3 pr-2 md:pr-[24px] pb-[42px]">
+                            <p class="text-[12px] md:text-[40px] text-black font-extrabold md:font-bold mb-[24px]">FEEL FREE TO CONTACT ME ANY TIME</p>
+                            <!-- <div class="w-full h-9 bg-[url('/images/Rectangle72.png')]"></div> -->
+                            <img src="./images/Rectangle72.png" class="w-full" alt="" srcset="">
+                        </div>
+                                                                            <!-- second half -->
+                        <div class="pt-6 pb-6 pr-4 pl-4 md:pt-[43px] md:pb-[43px] md:pr-[95px] md:pl-[47px] bg-darkBlue basis-[50%]">
+                            <p class="font-bold text-white text-[12px] md:text-[28px] mb-[50px]">Contact Information</p>
+    
+                            <div class="flex md:justify-between md:flex-row flex-col">
+                                <div class="w-[100%] md:w-[30%]">
+                                    <div class="flex items-center">               <!--icon box-->
+                                        <div class="w-5 h-5 bg-no-repeat bg-center bg-[url('/images/mail.png')]"></div>
+                                        <p class="md:text-[11px] text-[10px] text-white ml-2">Kamilzoseni@gmail.com</p>
+                                    </div>
+            
+                                    <div class="flex items-center mt-10">               <!--icon box-->
+                                        <div class="w-5 h-5 bg-no-repeat bg-center bg-[url('/images/instagram.png')]"></div>
+                                        <p class="md:text-[11px] text-[10px] text-white ml-2">@Kamilzamani</p>
+                                    </div>
+            
+                                    <div class="flex items-center mt-10">               <!--icon box-->
+                                        <div class="w-5 h-5 bg-no-repeat bg-center bg-[url('/images/twitter.png')]"></div>
+                                        <p class="md:text-[11px] text-[10px] text-white ml-2">@Kamilzamani1</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="hidden md:block bg-white w-1 h-[300px]"></div>   <!--line-->
+        
+                                <div class="md:w-[40%] w-full md:mt-0 mt-10">
+                                    <div class="flex items-center">               <!--icon box-->
+                                        <div class="w-5 h-5 bg-no-repeat bg-center bg-[url('/images/linkden.png')]"></div>
+                                        <p class="md:text-[11px] text-[10px] text-white ml-2">www.linkedin.com/in/kamiloseni</p>
+                                    </div>
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                </section>
+            </div>                                                                                       
+    
+                                                                    <!-- dialogs -->
+            <div class="pr-2 pl-2 fixed left-0 right-0 min-h-[100vh] top-0 bg-black bg-opacity-30  flex-col items-center justify-center backdrop hidden">                          
+                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
+                    <div class="mb-4 flex justify-between">
+                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Control Hub</h3>
+                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                    </div>
+                    <div class="flex justify-center items-end">  <!--images-->
+                        <img width="20%" src="./images/Crack Control Hub mock GIF.gif" alt="crack app showcase gif">
+                        <img width="60%" src="./images/modals/Frame 91.svg" alt="" srcset="">
+                    </div>
+                    <div class="mt-4"> <!--content-->
+                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                            The CRACK Control Hub is a smart application through which all CRACK devices can be managed and controlled effectively. 
+                        </p>
+                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                    </div>
+                </div>
+    
+                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
+                    <div class="mb-4 flex justify-between">
+                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">Marketing Dashboard</h3>
+                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                    </div>
+                    <div class="flex justify-center items-end">  <!--images-->
+                        <img width="60%" src="./images/modals/Studio-Display-1.svg" alt="crack app showcase gif">
+                        <img width="40%" src="./images/Marketing Dashboard Gif.gif" alt="" srcset="">
+                    </div>
+                    <div class="mt-4"> <!--content-->
+                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                            I assisted in the design of a Marketing dashboard design for the Michael Fajemilehin BI consultancy. The dashboard tracks revenue and other important marketing metrics from different stores, based on their utilization of specified marketing channels, to assist in making data-driven decisions.
+                        </p>
+                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view published dashboard</a>
+                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline block">Click to view prototype</a>
+                    </div>
+                </div>
+    
+                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
+                    <div class="mb-4 flex justify-between">
+                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Website Design</h3>
+                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                    </div>
+                    <div class="flex justify-center items-end">  <!--images-->
+                        <img width="60%" src="./images/modals/Studio-Display.svg" alt="crack app showcase gif">
+                        <img width="40%" src="./images/CRACK Web Gif.gif" alt="" srcset="">
+                    </div>
+                    <div class="mt-4"> <!--content-->
+                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                            I designed the CRACK website, an interactive web platform that reflects the company's brand identity and provides an intuitive user experience through the use of visual elements, colors and ergonomic design to enhance the user's overall perception of the website.
+                        </p>
+                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                    </div>
+                </div>
+    
+                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
+                    <div class="mb-4 flex justify-between">
+                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">Glass Website Design</h3>
+                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                    </div>
+                    <div class="flex justify-center items-end">  <!--images-->
+                        <img width="60%" src="./images/modals/Mac Studio.svg" alt="crack app showcase gif">
+                        <img width="40%" src="./images/glass.gif" alt="" srcset="">
+                    </div>
+                    <div class="mt-4"> <!--content-->
+                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                            Glass is an interactive fashion website that's designed to feel sleek and modern. One of the cool features is the AR changing room that lets you try on different outfits in augmented reality. I think this will be a hit with most people and also help companies boost sales. 
+                        </p>
+                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                    </div>
+                </div>
+    
+              
+            </div>
+    
+    
+        </main>
+        <script src="./Index.js"></script>
+        
+    </body>
+</html>
+<style>
+  h1 {
+    color: orange;
+  }
+</style>

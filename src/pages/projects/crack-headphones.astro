@@ -1,0 +1,148 @@
+---
+import TitledList from '../../components/crackHeadphones/TitledList.astro';
+import pageData from '../../data/crackHeadphones'
+import Section from '../../components/crackHeadphones/Section.astro';
+import Card from '../../components/Card.astro';
+import Understand from '../../components/subSections/Understand.astro';
+import BuildAndDesign from '../../components/subSections/BuildAndDesign.astro';
+import Table from '../../components/subSections/table.astro';
+import GoingForward from '../../components/subSections/GoingForward.astro';
+import Header from '../../components/Header.astro';
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <Header>
+        <div class="w-[226px] md:w-[482px] md:static  absolute bottom-8 left-4">
+            <h1 class="text-[10px] md:text-[24px] md:leading-[64px]"><span class="text-[19.11px] md:text-[64px]">CRACK</span> Headphones</h1>
+            <hr class="w-[70%] border-[1px] border-black">
+            <p class="text-[10px] md:text-[17px] md:leading-8">
+                Crack headphone is a uniquely and stylishly designed headphone that adds sophistication, retro-modern and style to your everyday life. With built in speakers, the compact design can be used anywhere.
+            </p>
+        </div>
+    </Header>
+
+
+
+    <main>
+        <div class="pt-6 pl-4 pr-4 pb-[40px] md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+            <Section
+                HeadingType='h2'
+                headingText="Overview"
+            >
+                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4">
+                    {pageData.overview.map((item) => <TitledList title={item.title} content={item.content}/>)}
+                </div>
+            </Section>
+        </div>
+        
+        <!-- about -->
+        <div class="pt-6 pl-4 pr-4 pb-[40px] md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+            <Section
+                HeadingType='h2'
+                headingText="About"
+            >
+                <p class="mt-2">
+                    No matter how interesting an activity may be, no one enjoys stress.
+                    And to avoid stress would be like trying to do a vigorous exercise without sweating, I mean it’s impossible; but that’s exactly what we tried to do with the headphones. Everything about the design is focused on delivering incredible sound and comfort with enhanced simplicity.
+                    <br>
+                    <br>
+                    As part of an exhausting research development in the headphone market, we discovered some interesting finds as regards to peoples’ needs. With this, we were able to determine a common volume and this was our starting point for developing a brand to meet a broad range of needs, <b>Crack!</b> 
+                </p>
+            </Section>
+        </div>
+
+        <!-- understanding the user -->
+        <Understand/>
+
+        <!-- build and design process -->
+        <BuildAndDesign/>
+
+        <!-- competitive audit -->
+        <div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+            <Section
+                HeadingType='h2'
+                headingText="Competitive Audit"
+            >
+                <Section     
+                    HeadingType="h3" 
+                    headingText="Goals"
+                    content="During the competitive audit and market research, the major goals were to figure out who our key competitors are, what they were doing right and what their weaknesses are in order to help improve our product. The following are the guiding questions used to determine the goals."
+                    
+                >
+                    <ul class="font-bold list-inside list-disc">
+                        <li>Who are our key competitors?</li>
+                        <li>What is their best headphone in the market, how much is it and what quality does it possess?</li>
+                        <li>What are the competitors strengths?</li>
+                        <li>What are the competitors weaknesses?</li>
+                    </ul>
+
+                    <Table />
+
+                    <p>
+                        <b>Bose</b><br>
+
+                        <b>Strengths: </b>Strong brand reputation and awareness, high-quality sound, innovative products, a wide range of products. <br>
+                        <b class="text-[#555555]">Weaknesses: </b>Higher pricing, limited distribution channels.  <br>
+                        <b class="text-[#555555]">Opportunities: </b> Expansion into new markets, development of new product lines, leveraging new technologies <br>
+                        <b class="text-[#555555]">Threats: </b> Intense competition, rapidly changing consumer preferences, economic downturns  <br>
+                        <br>
+                        <b>Sennheiser</b><br>
+                        <b class="text-[#555555]">Strengths: </b>Strong brand reputation, high-quality sound, innovative products, a wide range of products. <br>
+                        <b class="text-[#555555]">Weaknesses: </b>Higher pricing, limited distribution channels..  <br>
+                        <b class="text-[#555555]">Opportunities: </b>  Expansion into new markets, development of new product lines, leveraging new technologies. <br>
+                        <b class="text-[#555555]">Threats: </b>  Intense competition, rapidly changing consumer preferences, economic downturns. <br><br>
+                        <br>
+                        <b>Beats</b><br>
+                        <b class="text-[#555555]">Strengths: </b>Strong brand recognition and reputation, stylish design, aggressive marketing, wide distribution channels<br>
+                        <b class="text-[#555555]">Weaknesses: </b>Limited product range, higher pricing.<br>
+                        <b class="text-[#555555]">Opportunities: </b> Expansion into new markets, development of new product lines, partnerships and collaborations.<br>
+                        <b class="text-[#555555]">Threats: </b> Intense competition, rapidly changing consumer preferences, economic downturns. <br><br>
+                        <br>
+                        <b>Sony</b><br><br>
+                        <b class="text-[#555555]">Strengths: </b>Strong brand recognition and reputation, wide range of products, good sound quality.<br><br>
+                        <b class="text-[#555555]">Weaknesses: </b>Limited distribution channels, lack of brand awareness.<br><br>
+                        <b class="text-[#555555]">Opportunities: </b> Expansion into new markets, development of new product lines, leveraging new technologies Threats: Intense competition, rapidly changing consumer preferences, economic downturns.<br><br>
+                    </p>
+                </Section>
+            </Section>
+        </div>
+
+        <!-- features -->
+        <div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+            <Section HeadingType="h2" headingText="Features">
+                <p>The <b>Crack</b> headphones will provide a comfortable listening experience from one person to the next with these unique features:</p>
+                <ul class="list-outside list-disc">
+                    <li><span class="font-bold text-[#555555]">LINK-UP:</span> The headphones come with an incredible link-up feature that allow <b class="text-[#555555]">Crack</b> headphones connect wirelessly allowing two or more users listen to the same music from one source with just a push of a button either on the headphone or in the <b class="text-[#555555]">Crack</b> app.</li>
+                    <li><span class="font-bold text-[#555555]">SMART PAUSE:</span> Another interesting feature is the pause & play feature which allows an automatic pause once the headphone is taken off and an automatic play when it is put back on.</li>
+                    <li><span class="font-bold text-[#555555]">REPLACEABLE EAR PADS:</span> The ear pads come in different colors, and also limited ear-foams for limited editions; e.g. the Glow in the Dark edition and the Gold edition. Compared with a lot of other headphones, these ear-foams can manually and easily be replaced by the user.</li>
+                    <li><span class="font-bold text-[#555555]">LED BATTERY GAUGE:</span> The LED display light indicates charge level of headphone. There are five charge levels represented by the letters <b class="text-[#555555]">C R A C K</b> which glows.</li>
+                    <li><span class="font-bold text-[#555555]">DETACHABLE CABLES:</span> 69.2% of people who took a twitter survey said they could go back to using an audio jack (AUX) after using wireless bluetooth headphones.While most respondents agree that wired traditional headphones generally have better audio quality, the convenience of wirelessly connected headphones is hard to pass. So why not have a design that incorporates both worlds for the best user experience? The headphone can both be used wired or wirelessly, the cables come in different colors and design like the ear pads which can also be replaced and is also available for the “Glow in the Dark”, “Party” and “Gold” editions.</li>
+                </ul>
+            </Section>
+        </div>
+
+        <!-- going forward -->
+        <GoingForward />
+
+        <!-- lets Connect -->
+        <div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+            <Section HeadingType="h2" headingText="Let's Connect"
+                content="If you want to know more about the project, other projects, or if you want to work with me, feel free to contact me at "
+            >
+                <a class="underline font-medium" href="http://">kamilzoseni@gmail.com</a>
+            </Section>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="bg-black p-[8px] text-white">
+            <p class="text-center text-[8px] md:text-[11px] md:p-[27px]">Copyright @ 2022 Designed by Kamil Zamani. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
