@@ -12,7 +12,7 @@ interface Props{
 
 let h2S = "text-[17px] tracking-[0.11px] leading-4 font-medium  md:text-[34px] md:leading-[41px] md:tracking-[0.37px] "
 let h3S = "mt-4 text-[11px] tracking-[0.11px] leading-4 font-medium  md:text-[24px] md:tracking-[0.37px] mt-[24px]"
-let h4S = "text-[8px] tracking-[0.11px] leading-[12.2px] font-semibold md:text-[17px] md:leading-[41px] md:tracking-[0.37px]"
+let h4S = "mt-4 text-[10px] tracking-[0.11px] leading-[16px] font-medium md:text-[17px] md:leading-[41px] md:tracking-[0.37px]"
 
 let {headingText = 'heading', HeadingType = 'h1', headingStyle, contentStyle = "text-[11px] tracking-[0.3px] leading-[24px] md:text-[17px] md:leading-[40px]", align, content, ContainerType = 'div', containerStyle = 'text-[11px] tracking-[0.3px] leading-[24px] md:text-[17px] md:leading-[40px]'} = Astro.props
 
@@ -27,6 +27,9 @@ if(!headingStyle){
         case 'h3':
                 headingStyle = h3S
             break;
+        case 'h4':
+            headingStyle = h4S
+        break;
         default:
             break;
     }

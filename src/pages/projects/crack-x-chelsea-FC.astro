@@ -1,6 +1,6 @@
 ---
 import TitledList from '../../components/crackHeadphones/TitledList.astro';
-import pageData from '../../data/crackHeadphones'
+import pageData from '../../data/chelseax'
 import Section from '../../components/crackHeadphones/Section.astro';
 import Card from '../../components/Card.astro';
 import Understand from '../../components/subSections/Understand.astro';
@@ -15,12 +15,15 @@ import Header from '../../components/Header.astro';
     <meta charset="UTF-8">
 </head>
 <body>
-    <Header>
-        <div class="w-[226px] md:w-[482px] md:static  absolute bottom-8 left-4">
-            <h1 class="text-[10px] md:text-[24px] md:leading-[64px]"><span class="text-[19.11px] md:text-[64px]">CRACK</span> Headphones</h1>
-            <hr class="w-[70%] border-[1px] border-black">
-            <p class="text-[10px] md:text-[17px] md:leading-8">
-                Crack headphone is a uniquely and stylishly designed headphone that adds sophistication, retro-modern and style to your everyday life. With built in speakers, the compact design can be used anywhere.
+    <Header
+     url="bg-[url('/images/CHEALSEAX/hero.png')]"
+    
+    >
+        <div class="w-[70%] md:w-[482px] md:static text-white absolute bottom-8 left-4 hero-text bg-black bg-opacity-80 rounded-[16px]  md:rounded-[40px] pt-8 pb-8 pr-4 pl-4">
+            <h1 class="text-[16px] md:text-[24px] md:leading-[64px]">CRACK <span class="text-yellow-300">X</span> Chelsea FC</h1>
+            <hr class="w-[100%] border-[1px] border-white">
+            <p class="text-[10px] tracking-[0.3px] leading-4 md:text-[17px] md:leading-8">
+                Virtual reality (VR) technology has the potential to revolutionize the way we watch live sports, including football. By using VR headsets and other immersive technology, fans can experience the game as if they were right on the field, giving them a unique and highly engaging viewing experience.
             </p>
         </div>
     </Header>
@@ -33,7 +36,7 @@ import Header from '../../components/Header.astro';
                 HeadingType='h2'
                 headingText="Overview"
             >
-                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4">
+                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4 bg-lightGra2-100">
                     {pageData.overview.map((item) => <TitledList title={item.title} content={item.content}/>)}
                 </div>
             </Section>
@@ -45,88 +48,97 @@ import Header from '../../components/Header.astro';
                 HeadingType='h2'
                 headingText="About"
             >
-                <p class="mt-2">
-                    No matter how interesting an activity may be, no one enjoys stress.
-                    And to avoid stress would be like trying to do a vigorous exercise without sweating, I mean it’s impossible; but that’s exactly what we tried to do with the headphones. Everything about the design is focused on delivering incredible sound and comfort with enhanced simplicity.
+                <p>
+                    <span class="text-[#555555] font-bold italic">“This App has made me feel very much like I'm part of the team. A Blue i have always been, I can feel the Stamford Bridge atmosphere 
+                        from here. I love Chelsea FC and the App, in a way puts me In London...” - Wilson Ndlovu.
+                    </span>
                     <br>
-                    <br>
-                    As part of an exhausting research development in the headphone market, we discovered some interesting finds as regards to peoples’ needs. With this, we were able to determine a common volume and this was our starting point for developing a brand to meet a broad range of needs, <b>Crack!</b> 
+                    Virtual reality (VR) is an immersive technology that allows users to experience a simulated environment as if they were physically present in it. 
+                    One of the many exciting applications of VR is the ability to watch live sports events in a fully immersive way, as if one were actually at the game. 
+                    This document will provide an overview of the introduction of VR into a live football viewing experience at the Stamford Bridge.
                 </p>
             </Section>
         </div>
 
         <!-- understanding the user -->
-        <Understand/>
-
-        <!-- build and design process -->
-        <BuildAndDesign/>
-
-        <!-- competitive audit -->
-        <div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+        <div class="pt-6 pl-4 pr-4 pb-[40px] md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0 bg-lightGra2-100">
             <Section
                 HeadingType='h2'
-                headingText="Competitive Audit"
+                headingText="User Research"
             >
-                <Section     
-                    HeadingType="h3" 
-                    headingText="Goals"
-                    content="During the competitive audit and market research, the major goals were to figure out who our key competitors are, what they were doing right and what their weaknesses are in order to help improve our product. The following are the guiding questions used to determine the goals."
-                    
+                <Section
+                    HeadingType='h3'
+                    headingText="Understanding the user" 
+                    content="In order to gather information for this project, both primary and secondary research methods were employed. Primary research consisted of direct interviews and surveys with individuals in order to understand their needs and pain points. However, the geographical limitations of this primary research meant that additional data was required. As a result, secondary research methods were utilized, including data scraping from Google Play store and he Apple App Store. Both qualitative and quantitative data were used in the course of this research."                   
+                />
+                            <!-- data extrzction -->
+                <Section
+                    HeadingType='h3'
+                    headingText="Data Extraction" 
                 >
-                    <ul class="font-bold list-inside list-disc">
-                        <li>Who are our key competitors?</li>
-                        <li>What is their best headphone in the market, how much is it and what quality does it possess?</li>
-                        <li>What are the competitors strengths?</li>
-                        <li>What are the competitors weaknesses?</li>
-                    </ul>
-
-                    <Table />
+                    <Section
+                        HeadingType='h4'
+                        headingText="Process" 
+                    >
+                        <ul class="list-inside list-decimal">
+                            <li>Installation & Importation of Libraries</li>
+                            <li>Data Scraping</li>
+                            <li>Sentimental Analysis</li>
+                            <li>Exploratory Data Analysis</li>
+                        </ul>
+                    </Section>
+            
+                    <Section
+                        HeadingType='h4'
+                        headingText="Libraries Used" 
+                    >
+                        <ul class="list-inside list-decimal">
+                            <li>Tensorflow</li>
+                            <li>Transformers</li>
+                            <li>Plotly Express</li>
+                            <li>Numpy</li>
+                            <li>Pandas</li>
+                            <li>Json</li>
+                            <li>Google Play Scraper</li>
+                            <li>App Store Scraper</li>
+                            <li>Torch Torchvision Torch Audio</li>
+                            <li>Pyyaml</li>
+                            <li>Matplot</li>
+                            <li>Pipeline</li>
+                        </ul>
+                    </Section>
 
                     <p>
-                        <b>Bose</b><br>
-
-                        <b>Strengths: </b>Strong brand reputation and awareness, high-quality sound, innovative products, a wide range of products. <br>
-                        <b class="text-[#555555]">Weaknesses: </b>Higher pricing, limited distribution channels.  <br>
-                        <b class="text-[#555555]">Opportunities: </b> Expansion into new markets, development of new product lines, leveraging new technologies <br>
-                        <b class="text-[#555555]">Threats: </b> Intense competition, rapidly changing consumer preferences, economic downturns  <br>
-                        <br>
-                        <b>Sennheiser</b><br>
-                        <b class="text-[#555555]">Strengths: </b>Strong brand reputation, high-quality sound, innovative products, a wide range of products. <br>
-                        <b class="text-[#555555]">Weaknesses: </b>Higher pricing, limited distribution channels..  <br>
-                        <b class="text-[#555555]">Opportunities: </b>  Expansion into new markets, development of new product lines, leveraging new technologies. <br>
-                        <b class="text-[#555555]">Threats: </b>  Intense competition, rapidly changing consumer preferences, economic downturns. <br><br>
-                        <br>
-                        <b>Beats</b><br>
-                        <b class="text-[#555555]">Strengths: </b>Strong brand recognition and reputation, stylish design, aggressive marketing, wide distribution channels<br>
-                        <b class="text-[#555555]">Weaknesses: </b>Limited product range, higher pricing.<br>
-                        <b class="text-[#555555]">Opportunities: </b> Expansion into new markets, development of new product lines, partnerships and collaborations.<br>
-                        <b class="text-[#555555]">Threats: </b> Intense competition, rapidly changing consumer preferences, economic downturns. <br><br>
-                        <br>
-                        <b>Sony</b><br><br>
-                        <b class="text-[#555555]">Strengths: </b>Strong brand recognition and reputation, wide range of products, good sound quality.<br><br>
-                        <b class="text-[#555555]">Weaknesses: </b>Limited distribution channels, lack of brand awareness.<br><br>
-                        <b class="text-[#555555]">Opportunities: </b> Expansion into new markets, development of new product lines, leveraging new technologies Threats: Intense competition, rapidly changing consumer preferences, economic downturns.<br><br>
+                        In order to accurately represent the user population of the "Chelsea FC - The 5th Stand" app, data was collected from both the Google Play Store and the App Store. 
+                        Python was chosen as the extraction tool due to its extensive data manipulation and extraction libraries. 
+                        The open-source packages "google_play_scraper" and "app_store_scraper" were utilized for data scraping. To clean and organize the data, the Pandas library, built on top of Numpy, was used. 
+                        A sentiment analysis was also conducted to distinguish between positive and negative reviews, utilizing the transformers library. 
+                        The resulting dataset was then organized and prepared for analysis.
                     </p>
+
+                    <Section
+                        HeadingType='h4'
+                        headingText="User Reviews" 
+                        content="The data extraction process allowed us to gather a large number of user reviews, providing valuable insights and we found that a common request among customers was the addition of a live streaming feature for football matches, we also found out that Fans wanted to feel more at home and connected to their favorite club. This feedback was taken into consideration and what better way to make them feel at home and enjoy a live match than the introduction of a virtual live stream feature, which allows the fans have the experience of a live match at the Stamford Bridge even being far away."
+                    >
+                        <p>We extracted <b>46,245</b> reviews from both stores for this document. Of these, the following reviews were particularly relevant:</p>
+                        <ul class="list-outside list-disc italic">
+                            <li>“I have been a Chelsea fan since I was born, passed down from my dad to me, so seeing all news about CFC has been great and exciting, I never miss any game and I wish that one day I would be able to go to Stamford bridge to watch a live Chelsea match. Keep winning blues because you always make me proud to be a Chelsea fan.” - <b>Aruna David</b></li>
+                            <li>“This App has made me feel very much like I'm part of the team. A Blue i have always been, I can feel the Stamford Bridge atmosphere from here. I love Chelsea FC and the App, in a way puts me In London...” - <b>Wilson Ndlovu</b></li>
+                            <li>“Its been a wonderful experience having this app on my phone, it makes me closer to Stamford bridge though far away.” - <b>Festus Iwara</b></li>
+                            <li>“The 5th stand brings me so close to Stamford bridge right here even in Nigeria I feel like am in London watching. Thank you for a great support and job you do.” - <b>Odole Oladipupo</b></li>
+                            <li>“I’m American and being able to listen to the home commentary out of Stamford bridge is a real treat as i watch/stream the game. great stuff” - geo <b>andrew 97</b></li>
+                            <li>“I live very far from Stamford Bridge, - (Los Angeles), but I grew up in SW19, and am a lifetime Chelsea fan. This is a great way to stay in touch with events and interviews.” - <b>TheNewSilb</b></li>
+                            <li>“I enjoy everything about the blues. This is my life, this is where I belong and someday I’ll be at Stamford Bridge to watch my people live.” - <b>Killertunz</b></li>
+                        </ul>
+                    </Section>
                 </Section>
+
+                <p>
+                    There are so many Chelsea fans who would love to be able to watch the team play live, even if they are far away from Stamford Bridge. This got us thinking - why not bring Stamford Bridge to them and make them feel at home no matter where they are.
+                </p>
             </Section>
         </div>
-
-        <!-- features -->
-        <div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
-            <Section HeadingType="h2" headingText="Features">
-                <p>The <b>Crack</b> headphones will provide a comfortable listening experience from one person to the next with these unique features:</p>
-                <ul class="list-outside list-disc">
-                    <li><span class="font-bold text-[#555555]">LINK-UP:</span> The headphones come with an incredible link-up feature that allow <b class="text-[#555555]">Crack</b> headphones connect wirelessly allowing two or more users listen to the same music from one source with just a push of a button either on the headphone or in the <b class="text-[#555555]">Crack</b> app.</li>
-                    <li><span class="font-bold text-[#555555]">SMART PAUSE:</span> Another interesting feature is the pause & play feature which allows an automatic pause once the headphone is taken off and an automatic play when it is put back on.</li>
-                    <li><span class="font-bold text-[#555555]">REPLACEABLE EAR PADS:</span> The ear pads come in different colors, and also limited ear-foams for limited editions; e.g. the Glow in the Dark edition and the Gold edition. Compared with a lot of other headphones, these ear-foams can manually and easily be replaced by the user.</li>
-                    <li><span class="font-bold text-[#555555]">LED BATTERY GAUGE:</span> The LED display light indicates charge level of headphone. There are five charge levels represented by the letters <b class="text-[#555555]">C R A C K</b> which glows.</li>
-                    <li><span class="font-bold text-[#555555]">DETACHABLE CABLES:</span> 69.2% of people who took a twitter survey said they could go back to using an audio jack (AUX) after using wireless bluetooth headphones.While most respondents agree that wired traditional headphones generally have better audio quality, the convenience of wirelessly connected headphones is hard to pass. So why not have a design that incorporates both worlds for the best user experience? The headphone can both be used wired or wirelessly, the cables come in different colors and design like the ear pads which can also be replaced and is also available for the “Glow in the Dark”, “Party” and “Gold” editions.</li>
-                </ul>
-            </Section>
-        </div>
-
-        <!-- going forward -->
-        <GoingForward />
 
         <!-- lets Connect -->
         <div class="pt-6 pb-[64px] pl-4 pr-4 md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
@@ -144,5 +156,18 @@ import Header from '../../components/Header.astro';
             <p class="text-center text-[8px] md:text-[11px] md:p-[27px]">Copyright @ 2022 Designed by Kamil Zamani. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        import anime from 'animejs/lib/anime.es.js';
+
+        anime({
+            targets: '.hero-text',
+            translateX: [-700, 0],
+            duration: 800,
+            // easing: 'easeInOutQuad'
+        });
+
+    
+    </script>
 </body>
 </html>

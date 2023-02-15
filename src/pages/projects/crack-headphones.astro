@@ -17,8 +17,8 @@ import Header from '../../components/Header.astro';
     <meta charset="UTF-8">
 </head>
 <body>
-    <Header>
-        <div class="w-[226px] md:w-[482px] md:static  absolute bottom-8 left-4">
+    <Header url="bg-[url('/images/CRACKHEAD/crackHeadMob.png')]">
+        <div class="w-[226px] md:w-[482px] md:static  absolute bottom-8 left-4 hero-text">
             <h1 class="text-[10px] md:text-[24px] md:leading-[64px]"><span class="text-[19.11px] md:text-[64px]">CRACK</span> Headphones</h1>
             <hr class="w-[70%] border-[1px] border-black">
             <p class="text-[10px] md:text-[17px] md:leading-8">
@@ -146,5 +146,16 @@ import Header from '../../components/Header.astro';
             <p class="text-center text-[8px] md:text-[11px] md:p-[27px]">Copyright @ 2022 Designed by Kamil Zamani. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+             import anime from 'animejs/lib/anime.es.js';
+
+            anime({
+                targets: '.hero-text',
+                translateX: [-700, 0],
+                duration: 800,
+                // easing: 'easeInOutQuad'
+            });
+    </script>
 </body>
 </html>

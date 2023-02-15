@@ -1,7 +1,7 @@
 ---
-
+const {url} = Astro.props
 ---
-<header class="h-[300px] md:h-[767px] relative bg-cover bg-bottom bg-[url('/images/CRACKHEAD/crackHeadMob.png')] flex items-center md:pl-[64px] lg:pl-[144px]">
+<header class:list={["h-[300px] md:h-[767px] relative bg-cover bg-bottom flex items-center md:pl-[64px] lg:pl-[144px]", url]}>
     <nav>
         <div class="w-12 h-12 nav-btnOpen absolute right-2 top-0 md:hidden">
             <div class="flex flex-col gap-[3px] justify-center items-center absolute top-0 bottom-0 right-0 left-0 pr-2 pl-2">
@@ -11,7 +11,7 @@
             <button class="absolute top-0 bottom-0 left-0 right-0 opacity-0 nav-btn">open nav</button>
         </div>
 
-        <div class="hidden md:flex justify-between bg-black pb-[50px] pt-[48px] pr-16 pl-16 lg:pr-[144px] lg:pl-[144px] absolute left-0 right-0 top-0">
+        <div class="hidden md:flex justify-between bg-black pb-[50px] pt-[48px] pr-16 pl-16 lg:pr-[144px] lg:pl-[144px] absolute left-0 right-0 top-0 hea">
             <img class="md:h-[24px]" src="/images/CRACKHEAD/KZ..png" alt="kamil oseni logo">
             <ul class="flex gap-16">
                     <li>Home</li>
@@ -23,3 +23,15 @@
 
     <slot/>
 </header>
+<script>
+    import anime from 'animejs/lib/anime.es.js';
+
+    anime({
+        targets: '.hea',
+        translateY: [-200, 0],
+        duration: 800,
+        easing: 'easeInOutQuad'
+    });
+
+
+</script>
