@@ -1,0 +1,115 @@
+---
+import TitledList from '../../components/crackHeadphones/TitledList.astro';
+import pageData from '../../data/crackHeadphones'
+import Section from '../../components/crackHeadphones/Section.astro';
+import Card from '../../components/Card.astro';
+import Understand from '../../components/subSections/Understand.astro';
+import BuildAndDesign from '../../components/subSections/BuildAndDesign.astro';
+import Table from '../../components/subSections/table.astro';
+import GoingForward from '../../components/subSections/GoingForward.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Winamp Redesign</title>
+</head>
+<body>
+    <Header 
+        url="bg-[url('/images/WINAMP/hero.png')] bg-no-repeat"
+        backgroundColor="bg-transparent"
+        logoUrl="/images/logoDark.png"
+        buttonStyle="bg-darkBlue text-white"
+        >
+        <div class="pl-[29px] w-[226px] md:w-[482px] md:static hero-text">
+            <div class="inline-block">
+                <h1 class="text-[16px] font-medium md:text-[24px] lg:text-[48px] md:leading-[64px] inline-block">Winamp Redesign</h1>
+                <hr class="w-[100%] border-[1px] border-black">
+            </div>
+            <p class="text-[10px] md:text-[17px] md:leading-8">
+                The winamp redesign is a single page design of the old winamp UI.
+            </p>
+            <a href="#" class="text-white bg-black text-[6.3px] tracking-[0.42px] pt-[5.5px] pr-[10px] pl-[10px] pb-[5.5px] md:text-[15px] md:pt-[12px] md:pr-[38px] md:pl-[38px] md:pb-[12px]">View Prototype</a>
+        </div>
+    </Header>
+
+
+
+    <main class="text-[#555555]">
+        <div class="pt-6 pl-4 pr-4 pb-[40px] md:pt-8 md:pr-8 md:pl-18 md:pb-0  lg:pt-16 lg:pr-36 lg:pl-36 lg:pb-0">
+            <Section
+                HeadingType='h2'
+                headingText="Design"
+                content="The winamp redesign is a single page design of the old winamp UI."
+            >
+                <Section
+                    HeadingType='h3'
+                    headingText="GoProtoz differentiates a desktop application from a web application as:- "
+                >
+                    <img class="w-[100%]" src="/images/WINAMP/new.png" alt="winamp interface redesigned">
+                    <ul class="list-outside list-disc">
+                        <li>A Desktop application is a computer program that runs locally on a computer device like a desktop or a laptop whereas a web application needs an internet connection or some sort of network to work properly. Desktop apps are restricted by the hardware requirements of the device on which they run. However, a web application can be used by anyone who has access to the web browser.</li>
+                    </ul>
+                </Section>
+
+                <Section
+                    HeadingType='h3'
+                    headingText="My Redesign"
+                    content="My goal was to modernize the Winamp UI while keeping it’s functions accessible. The UI of the old app was so noisy and gave me a lot of anxiety so I tried to keep the new design simple and organized. I did a minor competitive analysis to find out what competitors are doing better or worse."
+                >
+                    <p>The key competitors I focused on are:</p>
+                    <ul class="list-outside list-disc">
+                        <li>MusicBee</li>
+                        <li>MediaMonkey</li>
+                        <li>Winyl</li>
+                        <li>AIMP</li>
+                        <li>Dopamine</li>
+                        <li>Windows Media Player</li>
+                    </ul>
+                    <p>I used the brand’s default colors and created styles for the design. No components were created as it was just a minor redesign.</p>
+                </Section>
+
+                <Section
+                    HeadingType='h3'
+                    headingText="New Features"
+                    content="Some features i thought about adding while designing are: "
+                >
+                    <ul class="list-outside list-disc">
+                        <li><b class="text-[#555555]">Smartlist feature:</b> automatically creates a playlist for you based on your 25 most played tracks</li>
+                        <li><b class="text-[#555555]">Child Lock feature:</b> plays ony radio-version songs.</li>
+                        <li><b class="text-[#555555]">Sleep Timer:</b> automatically pauses/stops mmusic playing at a set time.</li>
+                    </ul>
+                </Section>
+
+                <Section
+                    HeadingType='h3'
+                    headingText="Old Design"
+                >
+                    <img src="/images/WINAMP/old.png" alt="winamp old design">
+                </Section>
+            </Section>
+        </div>
+    </main>
+
+
+    <Footer
+        rightText="Galilee by Crack"
+        rightUrl="/projects/galilee-by-crack"
+    />
+
+    <script>
+             import anime from 'animejs/lib/anime.es.js';
+
+            anime({
+                targets: '.hero-text',
+                translateX: [-700, 0],
+                duration: 800,
+                // easing: 'easeInOutQuad'
+            });
+    </script>
+</body>
+</html>

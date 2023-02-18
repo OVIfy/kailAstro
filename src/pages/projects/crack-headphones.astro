@@ -8,6 +8,7 @@ import BuildAndDesign from '../../components/subSections/BuildAndDesign.astro';
 import Table from '../../components/subSections/table.astro';
 import GoingForward from '../../components/subSections/GoingForward.astro';
 import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -15,11 +16,12 @@ import Header from '../../components/Header.astro';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <title>CRACK Headphones</title>
 </head>
 <body>
     <Header url="bg-[url('/images/CRACKHEAD/crackHeadMob.png')]">
         <div class="w-[226px] md:w-[482px] md:static  absolute bottom-8 left-4 hero-text">
-            <h1 class="text-[10px] md:text-[24px] md:leading-[64px]"><span class="text-[19.11px] md:text-[64px]">CRACK</span> Headphones</h1>
+            <h1 class="text-[10px] md:text-[24px] lg:text-[48px] md:leading-[64px]"><span class="text-[19.11px] md:text-[64px]">CRACK</span> Headphones</h1>
             <hr class="w-[70%] border-[1px] border-black">
             <p class="text-[10px] md:text-[17px] md:leading-8">
                 Crack headphone is a uniquely and stylishly designed headphone that adds sophistication, retro-modern and style to your everyday life. With built in speakers, the compact design can be used anywhere.
@@ -141,11 +143,10 @@ import Header from '../../components/Header.astro';
     </main>
 
 
-    <footer>
-        <div class="bg-black p-[8px] text-white">
-            <p class="text-center text-[8px] md:text-[11px] md:p-[27px]">Copyright @ 2022 Designed by Kamil Zamani. All rights reserved.</p>
-        </div>
-    </footer>
+    <Footer
+        leftText="Crack X Chelsea"
+        leftUrl="/projects/crack-x-chelsea-FC"
+    />
 
     <script>
              import anime from 'animejs/lib/anime.es.js';

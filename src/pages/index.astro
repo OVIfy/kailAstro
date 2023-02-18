@@ -99,7 +99,7 @@ console.log('This runs in your terminal, not the browser!');
             </div>                                                                
         </header>
     
-        <main>
+        <main class="text-[#555555]">
     
                                                                                 <!-- case studies -->
             <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[100px]">
@@ -128,9 +128,9 @@ console.log('This runs in your terminal, not the browser!');
                         </div>
         
                         <div class="inline-block w-[190px] md:w-[300px] lg:w-[340px]">          <!-- card -->
-                            <div class="lg:w-[340px] lg:h-[340px] w-[190px] h-[190px] md:w-[300px] md:h-[300px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra">
+                            <a href="/projects/crack-x-chelsea-FC"><div class="lg:w-[340px] lg:h-[340px] w-[190px] h-[190px] md:w-[300px] md:h-[300px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra">
                                 <img src="./images/White 3 1.png" alt="a gif of glass webpage design" srcset="">
-                            </div>
+                            </div></a>
                             <div class="text-center">
                                 <p class="lg:text-2xl text-darkBlue font-bold mt-6">CRACK X Chelsea FC</p>
                                 <p class="text-darkBlue mt-2 text-[11px] lg:text-[16px] opacity-80">I designed a VR experience using XR to enhance live football viewing at Stamford Bridge, offering fully immersive experiences for fans.</p>
@@ -139,14 +139,19 @@ console.log('This runs in your terminal, not the browser!');
                         </div>
         
                         <div class="inline-block w-[190px] md:w-[300px] lg:w-[340px]">          <!-- card -->
-                            <div class="w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] box-border rounded-[16px] flex text-cente justify-center items-center border-2 border-lightGra">
+                            <a href="/projects/winamp-redesign"><div class="w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] box-border rounded-[16px] flex text-cente justify-center items-center border-2 border-lightGra">
                                 <img src="./images/Kamil Oseni Winamp Redesign.png" alt="a gif of glass webpage design" srcset="">
-                            </div>
+                            </div></a>
                             <div class="text-center">
                                 <p class="lg:text-2xl text-darkBlue font-bold mt-6">Winamp Redesign</p>
                                 <p class="text-darkBlue mt-2 text-[11px] lg:text-[16px] opacity-80">A redesign of the old Winamp UI</p>
                                 <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">DECEMBER 2022</p>
                             </div>
+                        </div>
+
+                        <div class="inline-block w-[190px] h-[190px] md:w-[300px] lg:w-[340px flex items-center justify-center">
+                                <p class="font-bold text-[12px] text-darkBlue">Keep Going ;)</p> 
+                                <img src="/up-arrow.svg" alt="" srcset="">
                         </div>
                     </div>
     
@@ -429,14 +434,14 @@ console.log('This runs in your terminal, not the browser!');
     
         </main>
         <script>
-            const navBtn = document.querySelector('.nav-btn')
-            const navBtnOpen = document.querySelector('.nav-btnOpen')
-            const navMobileMenu = document.querySelector('.nav-menu')
-            const closenavBtn = document.querySelector('.nav-btnClose')
+            const navBtn = document.querySelector('.nav-btn') as HTMLElement
+            const navBtnOpen = document.querySelector('.nav-btnOpen') as HTMLElement
+            const navMobileMenu = document.querySelector('.nav-menu') as HTMLElement
+            const closenavBtn = document.querySelector('.nav-btnClose') as HTMLElement
 
-            const modalOpeners = document.querySelectorAll('.modal-open')
-            const modals = document.querySelectorAll('.modal')
-            const backdrop = document.querySelector('.backdrop')
+            const modalOpeners = document.querySelectorAll('.modal-open') as NodeListOf<Element>
+            const modals = document.querySelectorAll('.modal') as NodeListOf<HTMLElement>
+            const backdrop = document.querySelector('.backdrop') as HTMLElement
             const modalClosers = document.querySelectorAll('.close-modal-btn')
 
 

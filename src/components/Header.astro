@@ -1,23 +1,61 @@
 ---
-const {url} = Astro.props
+const {url, backgroundColor = 'bg-[#000000]', logoUrl = "/images/CRACKHEAD/KZ..png", buttonColor = 'bg-white', buttonStyle = 'bg-white', navBtnStyle} = Astro.props
 ---
+<style>
+    body.hide{
+        overflow: hidden;
+    }
+</style>
 <header class:list={["h-[300px] md:h-[767px] relative bg-cover bg-bottom flex items-center md:pl-[64px] lg:pl-[144px]", url]}>
     <nav>
         <div class="w-12 h-12 nav-btnOpen absolute right-2 top-0 md:hidden">
             <div class="flex flex-col gap-[3px] justify-center items-center absolute top-0 bottom-0 right-0 left-0 pr-2 pl-2">
-                <div class="w-full h-[3px] bg-darkBlue nav-line rounded-md transform translate-x-[100px] animate-sliding-in-v2-1"></div>
-                <div class="w-full h-[3px] bg-darkBlue nav-line rounded-md transform translate-x-[100px] animate-sliding-in-v2-2"></div>
+                <div class:list={["w-full h-[3px] bg-darkBlue nav-line rounded-md transform translate-x-[100px] animate-sliding-in-v2-1", navBtnStyle]}></div>
+                <div class:list={["w-full h-[3px] bg-darkBlue nav-line rounded-md transform translate-x-[100px] animate-sliding-in-v2-2", navBtnStyle]}></div>
             </div>
             <button class="absolute top-0 bottom-0 left-0 right-0 opacity-0 nav-btn">open nav</button>
         </div>
 
-        <div class="hidden md:flex justify-between bg-black pb-[50px] pt-[48px] pr-16 pl-16 lg:pr-[144px] lg:pl-[144px] absolute left-0 right-0 top-0 hea">
-            <img class="md:h-[24px]" src="/images/CRACKHEAD/KZ..png" alt="kamil oseni logo">
-            <ul class="flex gap-16">
-                    <li>Home</li>
+        <div class:list={["hidden md:flex justify-between pb-[50px] pt-[48px] pr-16 pl-16 lg:pr-[144px] lg:pl-[144px] absolute left-0 right-0 top-0 hea", backgroundColor]}>
+            <img class="md:h-[24px]" src={logoUrl} alt="kamil oseni logo">
+            <ul class="flex gap-16 text-white">
+                    <a href="/"><li>Home</li></a>
                     <li>Resume</li>
-                    <li><a href="#" class="bg-white text-darkBlue p-[16px] rounded-[24px]">Get in touch</a></li>
+                    <li><a href="#" class:list={["text-darkBlue p-[16px] rounded-[24px]", buttonStyle]}>Get in touch</a></li>
             </ul>
+        </div>
+
+        <div class="bg-white fixed top-0 right-0 left-0 z-50 pt-[68px] pr-4 pl-4 min-h-[100vh] nav-menu hidden rounded-r-[50px] shadow-2xl md:!hidden">
+            <!-- section one -->
+            <div class="flex justify-between items-center">
+                <div class="w-16 h-16 bg-center bg-cover rounded-full bg-[url('/images/KamilArt.png')]"></div>
+                <div class="w-12 h-12 relative">   <!--nav button-->
+                <div class="flex flex-col justify-center items-center absolute top-0 bottom-0 right-0 left-0 pr-2 pl-2 pb-2 pt-2">
+                <div class="w-full h-[3px] bg-darkBlue nav-line mb-[2px] rounded-md transform animate-nav-one-closing"></div>
+                <div class="w-full h-[3px] bg-darkBlue nav-line mt-[2px] rounded-md transform animate-nav-two-closing"></div>
+                </div>
+                <button class="absolute top-0 bottom-0 left-0 right-0 opacity-0 nav-btnClose">close nav</button>
+                </div>
+            </div>
+                            <!-- section two -->
+            <div class="mt-10">
+                <ul>
+                <a href="/"><li class="text-[24px] font-semibold text-darkBlue transform translate-y-[100px] opacity-0 animate-nav-item-one">Home<span class="inline-block relative bottom-1 w-1 h-1 ml-2 bg-darkBlue"></span></li></a>
+                <li class="text-[24px] font-semibold text-darkBlue mt-10 mb-10 transform translate-y-[100px] opacity-0 animate-nav-item-two">Resume<span class="inline-block relative bottom-1 w-1 h-1 ml-2 bg-darkBlue"></span></li>
+                <li class="text-[24px] font-semibold text-darkBlue transform translate-y-[100px] opacity-0 animate-nav-item-three">Get in touch<span class="inline-block relative bottom-1 w-1 h-1 ml-2 bg-darkBlue"></span></li>
+                </ul>
+            </div>     
+                                <!-- section three -->
+            <ul class="mt-9 transform translate-y-[100px] opacity-0 animate-nav-item-three">
+                <li class="text-darkBlue font-bold">Instagram</li>
+                <li class="mt-2 text-darkBlue font-bold">LinkedIn</li>
+            </ul>
+                                    <!-- section four -->
+            <div class="flex w-24 justify-between mt-12 transform translate-y-[100px] opacity-0 animate-nav-item-three">
+                <img src="/images/twitterWhite.svg" alt="twitter icon">
+                <img src="/images/mailWhite.png" alt="mail icon">
+            </div>
+
         </div>
     </nav>
 
@@ -25,6 +63,11 @@ const {url} = Astro.props
 </header>
 <script>
     import anime from 'animejs/lib/anime.es.js';
+    const navBtn = document.querySelector('.nav-btn') as HTMLElement
+    const navBtnOpen = document.querySelector('.nav-btnOpen') as HTMLElement
+    const navMobileMenu = document.querySelector('.nav-menu') as HTMLElement
+    const closenavBtn = document.querySelector('.nav-btnClose')
+    const bod = document.querySelector('body')
 
     anime({
         targets: '.hea',
@@ -32,6 +75,17 @@ const {url} = Astro.props
         duration: 800,
         easing: 'easeInOutQuad'
     });
+
+    anime({
+            targets: '.hero-text',
+            translateX: [-700, 0],
+            duration: 800,
+            // easing: 'easeInOutQuad'
+        });
+
+    navBtn.addEventListener('click',(e)=> {navMobileMenu.style.display = 'block'; navBtnOpen.style.display = 'none', bod.classList.add('hide')})
+
+    closenavBtn.addEventListener('click', (e)=> {navMobileMenu.style.display = 'none'; navBtnOpen.style.display = 'block'; bod.classList.remove('hide')})
 
 
 </script>
