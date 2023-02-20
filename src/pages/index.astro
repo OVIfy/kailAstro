@@ -3,6 +3,7 @@
 // is your "component front matter". It never runs in the browser.
 import '../styles/style.css'
 import Footer from '../components/Footer.astro';
+import HomeCard from '../components/homeCard.astro';
 console.log('This runs in your terminal, not the browser!');
 ---
 <!-- Below is your "component template." It's just HTML, but with
@@ -103,7 +104,7 @@ console.log('This runs in your terminal, not the browser!');
         <main class="text-[#555555]">
     
                                                                                 <!-- case studies -->
-            <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[47px] relative">
+            <div class="pt-8 pb-8 pr-4 pl-4 bg-lightGra2-100 lg:pl-[143px] lg:pr-[144px] lg:pt-[140px] lg:pb-[26px] relative">
                 <div class="hidden lg:block w-[2px] h-[120px] bg-black absolute top-0"></div>
                 <section>
                     <div class="relative">                                 <!--heading div-->
@@ -117,43 +118,33 @@ console.log('This runs in your terminal, not the browser!');
                         <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">“The real measure for any technology is how intuitive it is to use.“</p>
                     </div>
                         <!-- cards grid -->
-                    <div class="flex flex-wrap gap-4 xl:gap-8">
-                        <div class="inline-block w-[190px] lg:w-[340px] md:w-[300px]">          <!-- card -->
-                            <a href="/projects/crack-headphones"><div class="w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra">
-                                <img src="./images/White 3 1.png" alt="a gif of glass webpage design" srcset="">
-                            </div></a>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold mt-6">CRACK Control Hub</p>
-                                <p class="text-darkBlue text-[11px] lg:text-[16px] mt-2 opacity-80">My full design of the Crack headphone, a luxury headphone with built-in speakers for sophisticated, retro-modern style</p>
-                                <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">JULY 2015</p>
-                            </div>
-                        </div>
-        
-                        <div class="inline-block w-[190px] md:w-[300px] lg:w-[340px]">          <!-- card -->
-                            <a href="/projects/crack-x-chelsea-FC"><div class="lg:w-[340px] lg:h-[340px] w-[190px] h-[190px] md:w-[300px] md:h-[300px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra">
-                                <img src="./images/White 3 1.png" alt="a gif of glass webpage design" srcset="">
-                            </div></a>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold mt-6">CRACK X Chelsea FC</p>
-                                <p class="text-darkBlue mt-2 text-[11px] lg:text-[16px] opacity-80">I designed a VR experience using XR to enhance live football viewing at Stamford Bridge, offering fully immersive experiences for fans.</p>
-                                <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">JUNE 2022</p>
-                            </div>
-                        </div>
-        
-                        <div class="inline-block w-[190px] md:w-[300px] lg:w-[340px]">          <!-- card -->
-                            <a href="/projects/winamp-redesign"><div class="w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] box-border rounded-[16px] flex text-cente justify-center items-center border-2 border-lightGra">
-                                <img src="./images/Kamil Oseni Winamp Redesign.png" alt="a gif of glass webpage design" srcset="">
-                            </div></a>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold mt-6">Winamp Redesign</p>
-                                <p class="text-darkBlue mt-2 text-[11px] lg:text-[16px] opacity-80">A redesign of the old Winamp UI</p>
-                                <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">DECEMBER 2022</p>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-4 md:gap-8">
+                        <HomeCard
+                            title="CRACK Control Hub"
+                            url="./images/White 3 1.png"
+                            content="My full design of the Crack headphone, a luxury headphone with built-in speakers for sophisticated, retro-modern style"
+                            year="JULY 2015"
+                        />
 
-                        <div class="md:hidden  w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] flex flex-col items-center justify-center  gap-[10.73px]">
-                                <p class="font-bold text-[12px] text-darkBlue">Keep Going ;)</p> 
-                                <img src="images/cr.png" alt="" srcset="">
+                        <HomeCard
+                            title="CRACK X Chelsea FC"
+                            url="./images/White 3 1.png"
+                            content="I designed a VR experience using XR to enhance live football viewing at Stamford Bridge, offering fully immersive experiences for fans."
+                            year="JULY 2022"
+                            linkedTo="/projects/crack-x-chelsea-FC"
+                        />
+
+                        <HomeCard
+                            title="Winamp Redesign"
+                            url="./images/Kamil Oseni Winamp Redesign.png"
+                            content="A redesign of the old Winamp UI"
+                            year="DECEMBER 2022"
+                            linkedTo="/projects/winamp-redesign"
+                        />
+
+                        <div class="flex items-center justify-center flex-col gap-4 relative bottom-[60px] md:hidden">
+                            <p class="font-bold text-[12px] text-darkBlue">Keep Going ;)</p> 
+                            <img src="images/cr.png" alt="" srcset="">
                         </div>
                     </div>
     
@@ -179,58 +170,48 @@ console.log('This runs in your terminal, not the browser!');
                     </div>
     
     
-                    <div class="flex flex-wrap gap-8">
-                        <div class="inline-block">          <!-- card -->
-                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px]  flex text-cente justify-center items-center border-2 border-lightGra modal-open hover:cursor-pointer">
-                                <img width="90%" src="./images/Crack Control Hub mock GIF.gif" alt="a gif of glass webpage design" srcset="">
-                            </div>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold">CRACK Control Hub</p>
-                                <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
-                            </div>
-                        </div>
-    
-                        <div class="inline-block">          <!-- card -->
-                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
-                                <img  src="./images/Marketing Dashboard Gif.gif" alt="a gif of glass webpage design" srcset="">
-                            </div>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold">Marketing Dashboard</p>
-                                <p class="text-darkBlue text-xs mt-4 underline">Click to view published dashboard</p>
-                                <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
-                            </div>
-                        </div>
-    
-                        <div class="inline-block">          <!-- card -->
-                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
-                                <img  src="./images/CRACK Web Gif.gif" alt="a gif of glass webpage design" srcset="">
-                            </div>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold">CRACK Website Design</p>
-                                <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
-                            </div>
-                        </div>
-    
-                        <div class="inline-block">          <!-- card -->
-                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
-                                <img src="./images/glass.gif" alt="a gif of glass webpage design" srcset="">
-                            </div>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold">Glass Website Design</p>
-                                <p class="text-darkBlue mt-4 underline text-xs">Click to view prototype</p>
-                            </div>
-                        </div>
-    
-                        <div class="inline-block">          <!-- card -->
-                            <div class="lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] h-[190px] w-[190px] box-border rounded-[16px] flex items-center border-2 border-lightGra modal-open hover:cursor-pointer">
-                                <img src="./images/GalileeHero.png" alt="a gif of glass webpage design" srcset="">
-                            </div>
-                            <div class="text-center">
-                                <p class="lg:text-2xl text-darkBlue font-bold">Galilee by CRACK</p>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-2 gap-4 grid-rows-3 md:grid-cols-3 md:grid-rows-2 md:gap-8">
+                        <HomeCard
+                            title="CRACK Control Hub"
+                            url="./images/Crack Control Hub mock GIF.gif"
+                            isModal
+                            imgStyle="w-[66%]"
+                        >
+                            <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                        </HomeCard>
 
-                        <div class="md:hidden  w-[190px] h-[190px] lg:w-[340px] lg:h-[340px] md:w-[300px] md:h-[300px] flex flex-col items-center justify-center  gap-[10.73px]">
+                        <HomeCard
+                            title="Marketing Dashboard"
+                            url="./images/Marketing Dashboard Gif.gif"
+                            isModal
+                        >
+                            <p class="text-darkBlue text-xs mt-4 underline">Click to view published dashboard</p>
+                            <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                        </HomeCard>
+
+                        <HomeCard
+                            title="CRACK Website Design"
+                            url="./images/CRACK Web Gif.gif"
+                            isModal
+                        >
+                            <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                        </HomeCard>
+    
+                        <HomeCard
+                            title="Glass Website Design"
+                            url="./images/glass.gif"
+                            isModal
+                        >
+                            <p class="text-darkBlue text-xs mt-4 underline">Click to view prototype</p>
+                        </HomeCard>
+
+                        <HomeCard
+                            title="Galilee by CRACK"
+                            url="./images/GalileeHero.png"
+                            isModal
+                        />
+
+                        <div class="flex items-center justify-center flex-col gap-4 relative bottom-[60px] md:hidden">
                             <p class="font-bold text-[12px] text-darkBlue">Keep Going ;)</p> 
                             <img src="images/cr.png" alt="" srcset="">
                         </div>
@@ -321,7 +302,7 @@ console.log('This runs in your terminal, not the browser!');
     
     
                         <!-- contact card -->
-                    <div class="bg-white flex pt-10 md:pt-[133px] pb-[123px] items-end shadow-md relative">
+                    <div class="bg-white flex pt-10 md:pt-[133px] md:pb-[123px] items-end shadow-md relative">
                         <div class="w-[64px] h-[68px] bg-[url('./images/kz.png')] bg-contain bg-center absolute top-0 left-0"></div>
                                                                         <!-- first half -->
                         <div class="basis-[50%] md:pl-[32px] pl-3 pr-2 md:pr-[24px] pb-[42px]">

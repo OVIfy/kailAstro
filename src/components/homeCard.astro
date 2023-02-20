@@ -1,0 +1,27 @@
+---
+interface Props{
+url : string,
+title : string,
+content? : string,
+year? : string,
+linkedTo? : string,
+isModal? : boolean,
+imgStyle? : string
+}
+const {url, title, content, year, linkedTo, isModal, imgStyle} = Astro.props
+
+let modalStyle
+if (isModal)
+    modalStyle = "modal-open hover:cursor-pointer"
+---
+<div class="inline-block w-full">          <!-- card -->
+    <a href={linkedTo}><div class:list={["w-full box-border rounded-[16px] pt-8 pb-8  flex text-center justify-center items-center border-[1px] border-lightGra2-200 ", modalStyle]}>
+        <img src={url} class={imgStyle} alt="a gif of glass webpage design" srcset="">
+    </div></a>
+    <div class="text-center">
+        <p class="lg:text-2xl text-darkBlue font-bold mt-6">{title}</p>
+        <p class="text-darkBlue text-[11px] lg:text-[16px] mt-2 opacity-80">{content}</p>
+        {year && <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">{year}</p>}
+        <slot />
+    </div>
+</div>
