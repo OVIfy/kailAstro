@@ -88,9 +88,9 @@ console.log('This runs in your terminal, not the browser!');
                                     
                 <section class="text-center">
                     <h1 class="lg:text-[100px] md:text-[60px] text-[32px] text-darkBlue font-semibold mt-16">Making Complex Simple</h1>
-                    <p class="text-[25px] md:text-[50px] text-darkBlue mt-[11px] md:mt-[32px]">Hi, I'm Kamil Oseni 👋🏾</p>
+                    <p class="text-[25px] md:text-[50px] text-darkBlue mt-[11px] md:mt-[32px]">Hi, I'm Kamil Oseni <sapn class="hand inline-block">👋🏾</sapn></p>
                     <p class="mt-[10px] text-[11px] sm:text-xl md:text-2xl text-darkBlue">I'm a creative product designer who is always on the hunt for new challenges and projects to sink my teeth into. Oh, and I absolutely adore art!</p>
-                    <img class="md:inline-block mt-5 hidden " src="./images/Line48.svg" alt="" srcset="">
+                    <img class="md:inline-block mt-5 hidden line" src="./images/Line48.svg" alt="" srcset="">
                 </section>
             </div>
     
@@ -456,6 +456,8 @@ console.log('This runs in your terminal, not the browser!');
             const backdrop = document.querySelector('.backdrop') as HTMLElement
             const modalClosers = document.querySelectorAll('.close-modal-btn')
 
+            import anime from 'animejs/lib/anime.es.js';
+
 
 
 
@@ -481,6 +483,24 @@ console.log('This runs in your terminal, not the browser!');
                 },1000)
 
             }))
+
+            anime({
+                    targets: '.hand',
+                    rotate: [0, 30, 0, 30, 0, 0, 0],
+                    endDelay: 1000,
+                    duration: 1000,
+                    easing: 'easeInOutQuad',
+                    loop: true
+                });
+
+                anime({
+                    targets: '.line',
+                    translateY : [0, 20, 0],
+                    duration: 1000,
+                    delay : 1000,
+                    easing: 'easeInOutQuad',
+                    loop: true
+                });
         </script>
         
     </body>
