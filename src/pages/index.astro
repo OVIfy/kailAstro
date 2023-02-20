@@ -2,6 +2,7 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component front matter". It never runs in the browser.
 import '../styles/style.css'
+import Footer from '../components/Footer.astro';
 console.log('This runs in your terminal, not the browser!');
 ---
 <!-- Below is your "component template." It's just HTML, but with
@@ -13,16 +14,16 @@ console.log('This runs in your terminal, not the browser!');
         <meta charset="UTF-8">
     </head>
     <body class="relative">
-        <header>
-            <div class="pt-[89px] pb-5 pr-4 pl-4 lg:pr-[40px] lg:pl-[40px] lg:pb-[62px] md:pt-[50px] bg-lightGra2-100">
+        <header> 
+            <div class="pt-[89px] pb-5 pr-4 pl-4 lg:pr-[40px] lg:pl-[40px] lg:pb-[36px] md:pt-[50px] bg-lightGra2-100">
                                                                 <!-- desktop nav -->
                 <nav>
                     <div class="hidden  md:flex items-center justify-between">
                         <div class="flex">
-                            <div class="w-[97px] h-[97px] bg-gray-600 rounded-full"></div>
+                            <div class="w-[97px] h-[97px] bg-center bg-cover bg-[url('/images/KamilArt.png')] rounded-full"></div>
                             <div class="mt-[30px]">
-                                <p class="text-[32px] font-bold">Kamil Oseni</p>
-                                <p class="text-darkBlue">Designing The Future, One Pixel At A Time</p>
+                                <p class="text-[32px] font-bold text-black">Kamil Oseni</p>
+                                <p class="text-darkBlue md:text-[11px] lg:text-[16px]">Designing The Future, One Pixel At A Time</p>
                             </div>
                         </div>
             
@@ -87,8 +88,8 @@ console.log('This runs in your terminal, not the browser!');
                                     
                 <section class="text-center">
                     <h1 class="lg:text-[100px] md:text-[60px] text-[32px] text-darkBlue font-semibold mt-16">Making Complex Simple</h1>
-                    <p class="text-[25px] md:text-[50px] text-darkBlue mt-[11px] md:mt-[48px]">Hi, I'm Kamil Oseni 👋🏾</p>
-                    <p class="mt-3 text-[11px] sm:text-xl md:text-2xl text-darkBlue">I'm a creative product designer who is always on the hunt for new challenges and projects to sink my teeth into. Oh, and I absolutely adore art!</p>
+                    <p class="text-[25px] md:text-[50px] text-darkBlue mt-[11px] md:mt-[32px]">Hi, I'm Kamil Oseni 👋🏾</p>
+                    <p class="mt-[10px] text-[11px] sm:text-xl md:text-2xl text-darkBlue">I'm a creative product designer who is always on the hunt for new challenges and projects to sink my teeth into. Oh, and I absolutely adore art!</p>
                     <img class="md:inline-block mt-5 hidden " src="./images/Line48.svg" alt="" srcset="">
                 </section>
             </div>
@@ -102,7 +103,8 @@ console.log('This runs in your terminal, not the browser!');
         <main class="text-[#555555]">
     
                                                                                 <!-- case studies -->
-            <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[100px]">
+            <div class="pt-8 pb-8 pr-4 pl-4 lg:pl-[144px] lg:pr-[144px] lg:pt-[140px] lg:pb-[100px] relative">
+                <div class="hidden md:block w-[2px] h-[120px] bg-black absolute top-0"></div>
                 <section>
                     <div class="relative">                                 <!--heading div-->
                         <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div>
@@ -110,7 +112,7 @@ console.log('This runs in your terminal, not the browser!');
                             <h2 class="text-[17px] md:text-2xl font-semibold">CASE STUDIES</h2> 
                             <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
                         </div>
-                        <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[24px] relative">LATEST WORKS</p>
+                        <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[19px] relative">LATEST WORKS</p>
                         <p class="text-[25px] md:text-[50px] text-black font-bold max-w-[800px] mb-[24px] relative">CREATIVITY TAKES COURAGE.</p>
                         <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">“The real measure for any technology is how intuitive it is to use.“</p>
                     </div>
@@ -149,7 +151,7 @@ console.log('This runs in your terminal, not the browser!');
                             </div>
                         </div>
 
-                        <div class="inline-block w-[190px] h-[190px] md:w-[300px] lg:w-[340px flex items-center justify-center">
+                        <div class="lg:hidden inline-block w-[190px] h-[190px] md:w-[300px] lg:w-[340px flex items-center justify-center">
                                 <p class="font-bold text-[12px] text-darkBlue">Keep Going ;)</p> 
                                 <img src="/up-arrow.svg" alt="" srcset="">
                         </div>
@@ -246,7 +248,7 @@ console.log('This runs in your terminal, not the browser!');
                             </div>
                             <p class="text-[11px] md:text-xs tracking-[7px] text-gray mb-[24px] relative">WHO AM I?</p>
                             <p class="text-[25px] md:text-[50px] text-black font-bold max-w-[800px] mb-[24px] relative">BE YOURSELF!</p>
-                            <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">“The important thing is not to stop questioning. Curiosity has its own reason for existence. “</>
+                            <p class="text-[11px] md:text-[16px] text-gra mb-[64px] italic relative">“The important thing is not to stop questioning. Curiosity has its own reason for existence. “</p>
                         </div>
     
                         <section>
@@ -433,6 +435,7 @@ console.log('This runs in your terminal, not the browser!');
     
     
         </main>
+        <Footer />
         <script>
             const navBtn = document.querySelector('.nav-btn') as HTMLElement
             const navBtnOpen = document.querySelector('.nav-btnOpen') as HTMLElement
