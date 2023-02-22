@@ -4,10 +4,19 @@
 import '../styles/style.css'
 import Footer from '../components/Footer.astro';
 import HomeCard from '../components/homeCard.astro';
+import pageData from '../data/gal.js'
+import Section from '../components/crackHeadphones/Section.astro';
+import TitledList from '../components/crackHeadphones/TitledList.astro';
 console.log('This runs in your terminal, not the browser!');
 ---
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
+<style>
+    body.hide{
+        overflow: hidden;
+    }
+</style>
+     
 <html lang="en">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,7 +115,7 @@ console.log('This runs in your terminal, not the browser!');
                 <div class="hidden lg:block w-[2px] h-[120px] bg-black absolute top-0"></div>
                 <section>
                     <div class="relative">                                 <!--heading div-->
-                        <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div>
+                        <div class="hidden xl:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div>
                         <div class="mb-[17px] md:mb-[48px] relative">
                             <h2 class="text-[17px] md:text-2xl font-semibold">CASE STUDIES</h2> 
                             <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
@@ -158,7 +167,7 @@ console.log('This runs in your terminal, not the browser!');
             <div class="pt-8 pb-8 pr-4 pl-4 bg-lightGra2-100 lg:pl-[143px] lg:pr-[144px] lg:pt-[47px] lg:pb-[47px]">
                 <section>
                     <div class="relative">                                 <!--heading div-->
-                        <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div>
+                        <!-- <div class="hidden lg:block absolute bg-no-repeat -top-16 bottom-0 right-0 lg:-right-[100px] w-3/6 bg-[url('/images/CaseStudies.png')]"></div> -->
                         <div class="mb-[17px] md:mb-[48px] relative">
                             <h2 class="text-[17px] md:text-2xl font-semibold">UI DESIGNS</h2> 
                             <div class="hidden md:block w-[120px] h-[2px] bg-black absolute left-[-160px] bottom-[15px]"></div>
@@ -348,71 +357,128 @@ console.log('This runs in your terminal, not the browser!');
                                                                     <!-- dialogs -->
             <div class="pr-2 pl-2 fixed left-0 right-0 min-h-[100vh] top-0 bg-black bg-opacity-30  flex-col items-center justify-center backdrop hidden">                          
                 <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
-                    <div class="mb-4 flex justify-between">
-                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Control Hub</h3>
-                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
-                    </div>
-                    <div class="grid grid-cols-4">  <!--images-->
-                        <img   src="./images/Crack Control Hub mock GIF.gif" alt="crack app showcase gif">
-                        <img class="col-span-3 self-center justify-self-center w-full"  src="./images/modals/Frame 91.svg" alt="" srcset="">
-                    </div>
-                    <div class="mt-4"> <!--content-->
-                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
-                            The CRACK Control Hub is a smart application through which all CRACK devices can be managed and controlled effectively. 
-                        </p>
-                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
-                    </div>
-                </div>
-    
-                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
-                    <div class="mb-4 flex justify-between">
-                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">Marketing Dashboard</h3>
-                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
-                    </div>
-                    <div class="flex justify-center items-end">  <!--images-->
-                        <img width="60%" src="./images/modals/Studio-Display-1.svg" alt="crack app showcase gif">
-                        <img width="40%" src="./images/Marketing Dashboard Gif.gif" alt="" srcset="">
-                    </div>
-                    <div class="mt-4"> <!--content-->
-                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
-                            I assisted in the design of a Marketing dashboard design for the Michael Fajemilehin BI consultancy. The dashboard tracks revenue and other important marketing metrics from different stores, based on their utilization of specified marketing channels, to assist in making data-driven decisions.
-                        </p>
-                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view published dashboard</a>
-                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline block">Click to view prototype</a>
+                    <div class="md:h-[90vh] overflow-y-auto">
+                        <div class="mb-4 flex justify-between">
+                            <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Control Hub</h3>
+                            <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                        </div>
+                        <div class="grid grid-cols-4">  <!--images-->
+                            <img   src="./images/Crack Control Hub mock GIF.gif" alt="crack app showcase gif">
+                            <img class="col-span-3 self-center justify-self-center w-full"  src="./images/modals/Frame 91.svg" alt="" srcset="">
+                        </div>
+                        <div class="mt-4"> <!--content-->
+                            <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                                The CRACK Control Hub is a smart application through which all CRACK devices can be managed and controlled effectively. 
+                            </p>
+                            <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                        </div>
                     </div>
                 </div>
     
                 <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
-                    <div class="mb-4 flex justify-between">
-                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Website Design</h3>
-                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
-                    </div>
-                    <div class="flex justify-center items-end">  <!--images-->
-                        <img width="60%" src="./images/modals/Studio-Display.svg" alt="crack app showcase gif">
-                        <img width="40%" src="./images/CRACK Web Gif.gif" alt="" srcset="">
-                    </div>
-                    <div class="mt-4"> <!--content-->
-                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
-                            I designed the CRACK website, an interactive web platform that reflects the company's brand identity and provides an intuitive user experience through the use of visual elements, colors and ergonomic design to enhance the user's overall perception of the website.
-                        </p>
-                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                    <div class="md:h-[90vh] overflow-y-auto">
+                        <div class="mb-4 flex justify-between">
+                            <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">Marketing Dashboard</h3>
+                            <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                        </div>
+                        <div class="flex justify-center items-end">  <!--images-->
+                            <img width="60%" src="./images/modals/Studio-Display-1.svg" alt="crack app showcase gif">
+                            <img width="40%" src="./images/Marketing Dashboard Gif.gif" alt="" srcset="">
+                        </div>
+                        <div class="mt-4"> <!--content-->
+                            <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                                I assisted in the design of a Marketing dashboard design for the Michael Fajemilehin BI consultancy. The dashboard tracks revenue and other important marketing metrics from different stores, based on their utilization of specified marketing channels, to assist in making data-driven decisions.
+                            </p>
+                            <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view published dashboard</a>
+                            <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline block mt-3">Click to view prototype</a>
+                        </div>
                     </div>
                 </div>
     
                 <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
-                    <div class="mb-4 flex justify-between">
-                        <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">Glass Website Design</h3>
-                        <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                    <div class="md:h-[90vh] overflow-y-auto">
+                        <div class="mb-4 flex justify-between">
+                            <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Website Design</h3>
+                            <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                        </div>
+                        <div class="flex justify-center items-end">  <!--images-->
+                            <img width="60%" src="./images/modals/Studio-Display.svg" alt="crack app showcase gif">
+                            <img width="40%" src="./images/CRACK Web Gif.gif" alt="" srcset="">
+                        </div>
+                        <div class="mt-4"> <!--content-->
+                            <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                                I designed the CRACK website, an interactive web platform that reflects the company's brand identity and provides an intuitive user experience through the use of visual elements, colors and ergonomic design to enhance the user's overall perception of the website.
+                            </p>
+                            <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                        </div>
                     </div>
-                    <div class="flex justify-center items-end">  <!--images-->
-                        <img width="60%" src="./images/modals/Mac Studio.svg" alt="crack app showcase gif">
-                        <img width="40%" src="./images/glass.gif" alt="" srcset="">
+                </div>
+    
+                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
+                    <div class="md:h-[90vh] overflow-y-auto">
+                        <div class="mb-4 flex justify-between">
+                            <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">Glass Website Design</h3>
+                            <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                        </div>
+                        <div class="flex justify-center items-end">  <!--images-->
+                            <img width="60%" src="./images/modals/Mac Studio.svg" alt="crack app showcase gif">
+                            <img width="40%" src="./images/glass.gif" alt="" srcset="">
+                        </div>
+                        <div class="mt-4"> <!--content-->
+                            <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
+                                Glass is an interactive fashion website that's designed to feel sleek and modern. One of the cool features is the AR changing room that lets you try on different outfits in augmented reality. I think this will be a hit with most people and also help companies boost sales. 
+                            </p>
+                            <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                        </div>
                     </div>
-                    <div class="mt-4"> <!--content-->
-                        <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
-                            Glass is an interactive fashion website that's designed to feel sleek and modern. One of the cool features is the AR changing room that lets you try on different outfits in augmented reality. I think this will be a hit with most people and also help companies boost sales. 
-                        </p>
-                        <a href="#" class="text-[8px] md:text-[12px] text-darkBlue underline">Click to view prototype</a>
+                </div>
+
+                <div class="bg-white pt-5 pb-8 pr-[26px] pl-[26px] rounded-[16px] modal transform translate-x-[100vw] hidden"> <!--modal-->
+                    <div class="md:h-[90vh] h-[95vh] overflow-y-auto">
+                        <div class="flex justify-center items-end relative">  <!--images-->
+                            <div class="absolute bg-white pl-3 pr-3 pt-2 pb-2 rounded-md right-[10%] top-[10%]">
+                                <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
+                            </div>
+
+                            <img width="100%" src="./images/GALILIE/hero.png" alt="crack app showcase gif">
+                            <div class="w-[168px] md:w-[482px] absolute top-[20%] text-white left-4 hero-text bg-[#000000] bg-opacity-80 rounded-[16px]  md:rounded-[40px] pt-[7px] pb-[5px] pr-4 pl-[13px] ml-4 md:pl-[16px] md:pr-[24px] md:pt-[32px] md:pb-[46px]">
+                                <div>
+                                    <h1 class="text-[16px] md:text-[24px] lg:text-[48px] md:leading-[64px] text-center text-white">Galilee by CRACK</h1>
+                                    <hr class="w-[100%] border-[1px] border-white">
+                                </div>
+                                
+                                <p class="text-[10px] tracking-[0.3px] leading-4 md:text-[17px] md:leading-8">
+                                    Galilee is an open virtual world where the possibilities are endless.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 relative z- "> <!--content-->
+                            <Section
+                                HeadingType='h2'
+                                headingText="Overview"
+                            >
+                                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4">
+                                    {pageData.overview.map((item) => <TitledList title={item.title} content={item.content}/>)}
+                                </div>
+                            </Section>
+
+                            <Section
+                                HeadingType='h2'
+                                headingText="About"
+                                content="Galilee, designed to be the premier open virtual reality world. Here, users can attend virtual cinemas, compete with friends in exciting VR games, attend concerts & fashion events, revisit dreams from other creators, and even go back in time to experience historical events like never before. Galilee offers a fully open world, allowing users to explore at their own pace."
+                            />
+
+                            <Section
+                                HeadingType='h2'
+                                headingText="App & Web Design"
+                                content="Here are links to the app and web designs"
+                            >
+                                <a href="#" class="text-red-500 underline">Galilee Web design</a>
+                                <br>
+                                <a href="#" class="text-red-500 underline">App Prototype design</a>
+                            </Section>
+
+                        </div>
                     </div>
                 </div>
     
@@ -436,6 +502,9 @@ console.log('This runs in your terminal, not the browser!');
             const backdrop = document.querySelector('.backdrop') as HTMLElement
             const modalClosers = document.querySelectorAll('.close-modal-btn')
 
+            const bod = document.querySelector('body')
+
+
             let current
 
             import anime from 'animejs/lib/anime.es.js';
@@ -456,6 +525,7 @@ console.log('This runs in your terminal, not the browser!');
                 modals[i].classList.add('slideInModal')
 
                 current = modals[i]
+                bod.classList.add('hide')
             }))
 
             modalClosers.forEach((ele, i)=> ele.addEventListener('click', e => {
@@ -464,6 +534,7 @@ console.log('This runs in your terminal, not the browser!');
                 setTimeout(()=>{
                     backdrop.style.display = 'none'
                     modals[i].style.display = 'none'    
+                    bod.classList.remove('hide')
                 },1000)
             }))
 
@@ -474,7 +545,8 @@ console.log('This runs in your terminal, not the browser!');
                 current.classList.add('slideOutModal')
                 setTimeout(()=>{
                     backdrop.style.display = 'none'
-                    current.style.display = 'none'    
+                    current.style.display = 'none'   
+                    bod.classList.remove('hide') 
                 },1000)
             })
 
