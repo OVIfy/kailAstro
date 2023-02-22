@@ -15,14 +15,14 @@ console.log('This runs in your terminal, not the browser!');
         <meta charset="UTF-8">
     </head>
     <body class="relative">
-        <header> 
-            <div class="pt-[89px] pb-5 pr-4 pl-4 lg:pr-[40px] lg:pl-[40px] lg:pb-[36px] md:pt-[50px] bg-lightGra2-100">
+        <header class="bg-lightGra2-100"> 
+            <div class="pt-[89px] pb-5 pr-4 pl-4 lg:pr-[40px] lg:pl-[40px] lg:pb-[36px] md:pt-[50px]">
                                                                 <!-- desktop nav -->
                 <nav>
                     <div class="hidden  md:flex items-center justify-between">
                         <div class="flex">
-                            <div class="w-[97px] h-[97px] bg-center bg-cover bg-[url('/images/KamilArt.png')] rounded-full"></div>
-                            <div class="mt-[30px]">
+                            <div class="w-[97px] h-[97px] bg-center bg-cover bg-[url('/images/KamilArt.png')] rounded-full transform transition-transform hover:scale-110 "></div>
+                            <div class="mt-[30px] ml-4">
                                 <p class="text-[32px] font-bold text-black">Kamil Oseni</p>
                                 <p class="text-darkBlue md:text-[11px] lg:text-[16px]">Designing The Future, One Pixel At A Time</p>
                             </div>
@@ -96,15 +96,13 @@ console.log('This runs in your terminal, not the browser!');
             </div>
     
                                                                     <!-- mobile nav -->
-            <div>
-    
-            </div>                                                                
+                                                                        
         </header>
     
         <main class="text-[#555555]">
     
                                                                                 <!-- case studies -->
-            <div class="pt-8 pb-8 pr-4 pl-4 bg-lightGra2-100 lg:pl-[143px] lg:pr-[144px] lg:pt-[140px] lg:pb-[26px] relative">
+            <div class="pt-8 pb-8 pr-4 pl-4  lg:pl-[143px] lg:pr-[144px] lg:pt-[140px] lg:pb-[26px] relative">
                 <div class="hidden lg:block w-[2px] h-[120px] bg-black absolute top-0"></div>
                 <section>
                     <div class="relative">                                 <!--heading div-->
@@ -128,10 +126,11 @@ console.log('This runs in your terminal, not the browser!');
 
                         <HomeCard
                             title="CRACK X Chelsea FC"
-                            url="./images/White 3 1.png"
+                            url="./images/CHEALSEAX/hero.png"
                             content="I designed a VR experience using XR to enhance live football viewing at Stamford Bridge, offering fully immersive experiences for fans."
                             year="JULY 2022"
                             linkedTo="/projects/crack-x-chelsea-FC"
+                            imgStyle="h-[10%]"
                         />
 
                         <HomeCard
@@ -281,7 +280,7 @@ console.log('This runs in your terminal, not the browser!');
                     </div>
     
                     <div class="basis-1/4 hidden md:block">
-                        <div class="xl:w-[359px] xl:h-[359px] lg:w-[280px] lg:h-[280px] md:w-[200px] md:h-[200px] bg-slate-600 bg-center bg-cover rounded-full bg-[url('/images/Profilepic.png')]"></div>
+                        <div class="xl:w-[359px] xl:h-[359px] lg:w-[280px] lg:h-[280px] md:w-[200px] md:h-[200px] bg-center bg-contain bg-no-repeat rounded-full bg-[url('/images/pPic.png')]"></div>
                     </div>
                 </section>
             </div>
@@ -305,13 +304,13 @@ console.log('This runs in your terminal, not the browser!');
                     <div class="bg-white flex pt-10 md:pt-[133px] md:pb-[123px] items-end shadow-md relative">
                         <div class="w-[64px] h-[68px] bg-[url('./images/kz.png')] bg-contain bg-center absolute top-0 left-0"></div>
                                                                         <!-- first half -->
-                        <div class="basis-[50%] md:pl-[32px] pl-3 pr-2 md:pr-[24px] pb-[42px]">
+                        <div class="basis-[50%] md:pl-[32px] pl-3 pr-2 md:pr-[24px]">
                             <p class="text-[12px] md:text-[40px] text-black font-extrabold md:font-bold mb-[24px]">FEEL FREE TO CONTACT ME ANY TIME</p>
                             <!-- <div class="w-full h-9 bg-[url('/images/Rectangle72.png')]"></div> -->
                             <img src="./images/Rectangle72.png" class="w-full" alt="" srcset="">
                         </div>
                                                                             <!-- second half -->
-                        <div class="pt-6 pb-6 pr-4 pl-4 md:pt-[43px] xl:pb-[43px] xl:pr-[95px] xl:pl-[47px] bg-black basis-[50%]">
+                        <div class="pt-6 pb-6 pr-4 pl-4 md:pt-[43px]  xl:pl-[47px] bg-black basis-[50%]">
                             <p class="font-bold text-white text-[12px] md:text-[28px] mb-[50px]">Contact Information</p>
     
                             <div class="flex md:justify-between md:flex-row flex-col">
@@ -332,7 +331,7 @@ console.log('This runs in your terminal, not the browser!');
                                     </div>
                                 </div>
                                 
-                                <div class="hidden md:block bg-white w-[2px] h-[300px]"></div>   <!--line-->
+                                <div class="hidden md:block bg-white w-[2px] h-[240px]"></div>   <!--line-->
         
                                 <div class="md:w-[49%] w-full md:mt-0 mt-10">
                                     <div class="flex items-center">               <!--icon box-->
@@ -353,9 +352,9 @@ console.log('This runs in your terminal, not the browser!');
                         <h3 class="text-darkBlue text-[12px] md:text-[24px] font-bold">CRACK Control Hub</h3>
                         <button class="close-modal-btn"><img src="./images/modals/close.svg" alt="close icon"><span class="opacity-0 absolute">close modal</span></button>
                     </div>
-                    <div class="flex justify-center items-end">  <!--images-->
-                        <img width="20%" src="./images/Crack Control Hub mock GIF.gif" alt="crack app showcase gif">
-                        <img width="60%" src="./images/modals/Frame 91.svg" alt="" srcset="">
+                    <div class="grid grid-cols-4">  <!--images-->
+                        <img   src="./images/Crack Control Hub mock GIF.gif" alt="crack app showcase gif">
+                        <img class="col-span-3 self-center justify-self-center w-full"  src="./images/modals/Frame 91.svg" alt="" srcset="">
                     </div>
                     <div class="mt-4"> <!--content-->
                         <p class="text-[11px] md:text-[17px] tracking-[0.3px] md:tracking-[1px] leading-[24px] md:leading-[40px]">
@@ -437,6 +436,8 @@ console.log('This runs in your terminal, not the browser!');
             const backdrop = document.querySelector('.backdrop') as HTMLElement
             const modalClosers = document.querySelectorAll('.close-modal-btn')
 
+            let current
+
             import anime from 'animejs/lib/anime.es.js';
 
 
@@ -453,6 +454,8 @@ console.log('This runs in your terminal, not the browser!');
                 backdrop.style.display = 'flex'
                 modals[i].classList.remove('slideOutModal')
                 modals[i].classList.add('slideInModal')
+
+                current = modals[i]
             }))
 
             modalClosers.forEach((ele, i)=> ele.addEventListener('click', e => {
@@ -462,8 +465,20 @@ console.log('This runs in your terminal, not the browser!');
                     backdrop.style.display = 'none'
                     modals[i].style.display = 'none'    
                 },1000)
-
             }))
+
+            console.log('current', current)
+            
+            backdrop.addEventListener('click', e => {
+                current.classList.remove('slideInModal')
+                current.classList.add('slideOutModal')
+                setTimeout(()=>{
+                    backdrop.style.display = 'none'
+                    current.style.display = 'none'    
+                },1000)
+            })
+
+            modals.forEach((modal) => modal.addEventListener('click', e => e.stopPropagation())) //prevent modal from closing when its clicked
 
             anime({
                     targets: '.hand',
