@@ -15,11 +15,11 @@ const {leftText, leftUrl, rightText, rightUrl} = Astro.props
         {rightText && leftText && <div class="flex justify-between  ">
             {rightText && <a href={rightUrl}><div class="flex items-center gap-1">
                 <img class="w-[12px] inline-block" src="/images/arrow.png" alt="Next icon">
-                <p>{rightText}</p>
+                <p class="font-bold">{rightText}</p>
             </div></a>}
 
             {leftText && <a href={leftUrl}><div class="flex items-center justify-end gap-1">
-                <p>{leftText}</p>
+                <p class="font-bold">{leftText}</p>
                 <img class="w-[12px] inline-block rotate-180" src="/images/arrow.png" alt="Next icon">
             </div></a>}
         </div>}
@@ -27,8 +27,8 @@ const {leftText, leftUrl, rightText, rightUrl} = Astro.props
         {leftText && !rightText &&
             <div class="flex">
                 <a href={leftUrl}><div class="flex items-center gap-1">
-                    <img class="w-[12px] inline-block rotate-180" src="/images/arrowr.png" alt="Next icon">
-                    <p>{leftText}</p>
+                    <img class="w-[20px] inline-block rotate-180" src="/images/arrowr.png" alt="Next icon">
+                    <p class="font-bold">{leftText}</p>
                 </div></a>
             </div>
         }
@@ -36,8 +36,8 @@ const {leftText, leftUrl, rightText, rightUrl} = Astro.props
         {rightText && !leftText &&
             <div class="flex justify-end">
                 <a href={rightUrl}><div class="flex items-center gap-1">
-                    <p>{rightText}</p>
-                    <img class="w-[12px] inline-block" src="/images/arrowr.png" alt="Next icon">
+                    <p class="font-bold">{rightText}</p>
+                    <img class="w-[20px] inline-block" src="/images/arrowr.png" alt="Next icon">
                 </div></a>
             </div>
         }

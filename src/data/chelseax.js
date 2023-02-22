@@ -1,5 +1,5 @@
 const pageData = {
-    overview : [
+    overview : { desktop : [
         {
             title : 'My Role',
             content : ['Product Designer', 'UX Researcher', 'UI/UX Designer']
@@ -25,6 +25,34 @@ const pageData = {
             content: ['June 2022 - Present']
         }
     ],
+    mobile:  [
+        {
+            title : 'My Role',
+            content : ['Product Designer', 'UX Researcher', 'UI/UX Designer']
+        },
+        {
+            title : 'Category',
+            content : ['Sound', 'Luxury', 'Travel', 'Creative Design']
+        },
+        {
+            title : 'Mission',
+            content : ['Introduce Virtual Live Streaming to Chelsea FC.', 'Design a unique and stylish VR headset.']
+        },
+        {
+            title : 'Tools',
+            content : ['Figma', 'Python', 'DraftXR', 'Microsoft Excel']
+        },
+        {
+            title : 'Team',
+            content : ['Kamil Oseni -  Product Design, VR/UI/UX Design', 'Michael Fajemilehin - Product Analyst', 'Edwin Uzobehin - Pen/Digital Artist', 'Don Pedro Kizito - UX Writer']
+        },
+        {
+            title: 'Timeline',
+            content: ['June 2022 - Present']
+        }
+    ]
+
+    },
 
     painpoints : [
         {

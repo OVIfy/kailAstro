@@ -1,5 +1,5 @@
 ---
-const {url, backgroundColor = 'bg-[#000000]', logoUrl = "/images/CRACKHEAD/KZ..png", buttonColor = 'bg-white', buttonStyle = 'bg-white', navBtnStyle} = Astro.props
+const {url, backgroundColor = 'bg-[#000000]', logoUrl = "/images/CRACKHEAD/KZ..png", buttonColor = 'bg-white', buttonStyle = 'bg-white', navBtnStyle, textColor} = Astro.props
 ---
 <style>
     body.hide{
@@ -19,8 +19,8 @@ const {url, backgroundColor = 'bg-[#000000]', logoUrl = "/images/CRACKHEAD/KZ..p
         <div class:list={["hidden md:flex justify-between pb-[50px] pt-[48px] pr-16 pl-16 lg:pr-[144px] lg:pl-[144px] absolute left-0 right-0 top-0 hea", backgroundColor]}>
             <img class="md:h-[24px]" src={logoUrl} alt="kamil oseni logo">
             <ul class="flex gap-16 text-white">
-                    <a href="/"><li>Home</li></a>
-                    <li>Resume</li>
+                    <a href="/" class={textColor}><li>Home</li></a>
+                    <li class={textColor}>Resume</li>
                     <li><a href="#" class:list={["text-darkBlue p-[16px] rounded-[24px]", buttonStyle]}>Get in touch</a></li>
             </ul>
         </div>

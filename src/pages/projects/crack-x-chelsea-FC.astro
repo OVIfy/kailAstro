@@ -21,7 +21,7 @@ import Footer from '../../components/Footer.astro';
 <body>
     <Header
      url="bg-[url('/images/CHEALSEAX/hero.png')]"
-    
+     navBtnStyle="bg-white"
     >
         <div class="w-[70%] md:w-[482px] md:static text-white absolute bottom-8 left-4 hero-text bg-black bg-opacity-80 rounded-[16px]  md:rounded-[40px] pt-8 pb-8 pr-4 pl-4">
             <h1 class="text-[16px] md:text-[24px] lg:text-[48px] md:leading-[64px]">CRACK <span class="text-yellow-300">X</span> Chelsea FC</h1>
@@ -40,8 +40,12 @@ import Footer from '../../components/Footer.astro';
                 HeadingType='h2'
                 headingText="Overview"
             >
-                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4 bg-lightGra2-100">
-                    {pageData.overview.map((item) => <TitledList title={item.title} content={item.content}/>)}
+                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4 bg-lightGra2-100 md:hidden">
+                    {pageData.overview.desktop.map((item) => <TitledList title={item.title} content={item.content}/>)}
+                </div>
+
+                <div class="md:grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4 bg-lightGra2-100 hidden">
+                    {pageData.overview.mobile.map((item) => <TitledList title={item.title} content={item.content}/>)}
                 </div>
             </Section>
         </div>
@@ -185,7 +189,7 @@ import Footer from '../../components/Footer.astro';
                     <div>
                         <img class="w-[48%] inline-block" src="/images/CHEALSEAX/View6.png" alt="shots from the VR stadium">
                         <img class="w-[48%] inline-block" src="/images/CHEALSEAX/View8.png" alt="shots from the VR conference room">
-                        <img class="w-[46%] inline-block" src="/images/CHEALSEAX/Frame71.png" alt="shots from the VR football field">
+                        <img class="w-[46%] inline-block mt-1" src="/images/CHEALSEAX/stam.gif" alt="shots from the VR football field">
                     </div>
                 </Section>
 
@@ -307,7 +311,7 @@ import Footer from '../../components/Footer.astro';
                 headingText="Let's Connect"
                 content="If you want to know more about the project, other projects, or if you want to work with me, feel free to contact me at "
             >
-                <a class="underline font-medium" href="http://">kamilzoseni@gmail.com</a>
+                <a class="underline font-medium" target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamilzamani2407@gmail.com">kamilzoseni@gmail.com</a>
             </Section>
         </div>
     </main>

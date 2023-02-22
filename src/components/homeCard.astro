@@ -7,9 +7,10 @@ year? : string,
 linkedTo? : string,
 isModal? : boolean,
 imgStyle? : string,
-imgContStyle? : string
+imgContStyle? : string,
+contentLink? : string
 }
-const {url, title, content, year, linkedTo, isModal, imgStyle, imgContStyle} = Astro.props
+const {url, title, content, year, linkedTo, isModal, imgStyle, imgContStyle,  contentLink} = Astro.props
 
 let modalStyle
 if (isModal)
@@ -21,7 +22,7 @@ if (isModal)
     </div></a>
     <div class="text-center">
         <p class="lg:text-2xl text-darkBlue font-bold mt-6">{title}</p>
-        <p class="text-darkBlue text-[11px] lg:text-[16px] mt-2 opacity-80">{content}</p>
+        <a target="_blank" href={contentLink}><p class="text-darkBlue text-[11px] lg:text-[16px] mt-2 opacity-80">{content}</p></a>
         {year && <p class="text-xs tracking-[7px] font-extrabold text-darkBlue mt-2">{year}</p>}
         <slot />
     </div>
