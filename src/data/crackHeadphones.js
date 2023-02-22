@@ -1,5 +1,5 @@
 const pageData = {
-    overview : [
+    overview :{ desktop: [
         {
             title : 'My Role',
             content : ['Product Designer', 'UX Researcher', 'UI/UX Designer']
@@ -18,13 +18,41 @@ const pageData = {
         },
         {
             title : 'Team',
-            content : ['kamil Oseni', 'Ria Kunti', 'Crixx Ayo', 'Kasali Abimbola']
+            content : ['Kamil Oseni - Product Design, UX Design', 'Ria Kunti - 3D', 'Crixx Ayo - Graphic Design', 'Kasali Abimbola - 3D']
         },
         {
             title: 'Timeline',
-            content: ['july 2015 - present']
+            content: ['July 2015 - present']
         }
     ],
+
+    mobile : [
+        {
+            title : 'My Role',
+            content : ['Product Designer', 'UX Researcher', 'UI/UX Designer']
+        },
+        {
+            title : 'Category',
+            content : ['Sound', 'Luxury', 'Travel', 'Creative Design']
+        },
+        {
+            title : 'Mission',
+            content : ['Design a unique and luxurious headphone.', 'Think of innovative features that will beat the headphone competitions.']
+        },
+        {
+            title : 'Tools',
+            content : ['Autocad Maya', 'Cinema 4D', 'Adobe photoshop']
+        },
+        {
+            title : 'Team',
+            content : ['Kamil Oseni', 'Ria Kunti', 'Crixx Ayo', 'Kasali Abimbola']
+        },
+        {
+            title: 'Timeline',
+            content: ['July 2015 - present']
+        }
+    ],
+},
 
     painpoints : [
         {

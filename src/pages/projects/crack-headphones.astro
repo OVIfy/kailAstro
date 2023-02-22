@@ -37,8 +37,12 @@ import Footer from '../../components/Footer.astro';
                 HeadingType='h2'
                 headingText="Overview"
             >
-                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4">
-                    {pageData.overview.map((item) => <TitledList title={item.title} content={item.content}/>)}
+                <div class="lg:grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4 hidden">
+                    {pageData.overview.desktop.map((item) => <TitledList title={item.title} content={item.content}/>)}
+                </div>
+
+                <div class="grid grid-cols-3 grid-rows-2 gap-3 pr-2 pl-2 pt-4 lg:hidden">
+                    {pageData.overview.mobile.map((item) => <TitledList title={item.title} content={item.content}/>)}
                 </div>
             </Section>
         </div>
