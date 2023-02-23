@@ -20,21 +20,23 @@ import Footer from '../../components/Footer.astro';
 </head>
 <body>
     <Header 
-        url="bg-[url('/images/WINAMP/hero.png')] bg-no-repeat"
         backgroundColor="bg-transparent"
         logoUrl="/images/logoDark.png"
         buttonStyle="bg-darkBlue text-white"
         textColor="text-darkBlue"
         >
-        <div class="pl-[29px] w-[226px] md:w-[40%] md:static hero-text">
-            <div class="inline-block">
-                <h1 class="text-[16px] font-medium md:text-[24px] lg:text-[48px] md:leading-[64px] inline-block">Winamp Redesign</h1>
-                <hr class="w-[100%] border-[1px] border-black">
+        <div class="h-[100%] w-[100%] grid grid-cols-2 p-10 gap-4">
+            <div class="self-center">
+                <div class="inline-block">
+                    <h1 class="text-[16px] font-medium md:text-[24px] lg:text-[48px] md:leading-[64px] inline-block">Winamp Redesign</h1>
+                    <hr class="w-[100%] border-[1px] border-black">
+                </div>
+                <p class="text-[10px] md:text-[17px] md:leading-8 mt-2 md:mb-5">
+                    The winamp redesign is a single page design of the old winamp UI.
+                </p>
+                <a href="#" class="text-white bg-black text-[6.3px] tracking-[0.42px] pt-[5.5px] pr-[10px] pl-[10px] pb-[5.5px] md:text-[15px] md:pt-[12px] md:pr-[38px] md:pl-[38px] md:pb-[12px]">View Prototype</a>
             </div>
-            <p class="text-[10px] md:text-[17px] md:leading-8 mt-2 md:mb-5">
-                The winamp redesign is a single page design of the old winamp UI.
-            </p>
-            <a href="#" class="text-white bg-black text-[6.3px] tracking-[0.42px] pt-[5.5px] pr-[10px] pl-[10px] pb-[5.5px] md:text-[15px] md:pt-[12px] md:pr-[38px] md:pl-[38px] md:pb-[12px]">View Prototype</a>
+            <img class="justify-self-center self-center" src="/images/WINAMP/hero2.png">
         </div>
     </Header>
 
@@ -47,11 +49,11 @@ import Footer from '../../components/Footer.astro';
                 headingText="Design"
                 content="The winamp redesign is a single page design of the old winamp UI."
             >
+                <img class="w-[100%]" src="/images/WINAMP/new.png" alt="winamp interface redesigned">
                 <Section
                     HeadingType='h3'
                     headingText="GoProtoz differentiates a desktop application from a web application as:- "
                 >
-                    <img class="w-[100%]" src="/images/WINAMP/new.png" alt="winamp interface redesigned">
                     <ul class="list-outside list-disc pl-6">
                         <li>A Desktop application is a computer program that runs locally on a computer device like a desktop or a laptop whereas a web application needs an internet connection or some sort of network to work properly. Desktop apps are restricted by the hardware requirements of the device on which they run. However, a web application can be used by anyone who has access to the web browser.</li>
                     </ul>
